@@ -1,144 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Meteodenny</title><link href="http://dennissergeev.github.io/" rel="alternate"></link><link href="http://dennissergeev.github.io/feeds/all.atom.xml" rel="self"></link><id>http://dennissergeev.github.io/</id><updated>2015-07-18T22:36:00+01:00</updated><entry><title>Testing IPython Notebook plugin</title><link href="http://dennissergeev.github.io/testing-ipython-notebook-plugin.html" rel="alternate"></link><updated>2015-07-18T22:36:00+01:00</updated><author><name>Denis Sergeev</name></author><id>tag:dennissergeev.github.io,2015-07-18:testing-ipython-notebook-plugin.html</id><summary type="html">&lt;p&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-        <title>Testing IPython Notebook plugin</title>
-        <meta charset="utf-8" />
-        <link href="http://dennissergeev.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Meteodenny Full Atom Feed" />
-        <link href="http://dennissergeev.github.io/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Meteodenny Categories Atom Feed" />
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;This line is written in markdown.&lt;/p&gt;
 
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ggplot&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-        <link rel="stylesheet" type="text/css" href="http://dennissergeev.github.io/theme/gumby.css" />
-        <link rel="stylesheet" type="text/css" href="http://dennissergeev.github.io/theme/style.css" />
-        <link rel="stylesheet" type="text/css" href="http://dennissergeev.github.io/theme/pygment.css" />
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-        <script src="http://dennissergeev.github.io/theme/js/libs/modernizr-2.6.2.min.js"></script>
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[4]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-</head>
-
-<body id="index" class="home">
-
-
-    <div class="container">
-
-        <div class="row">
-
-          <header id="banner" class="body">
-                  <h1><a href="http://dennissergeev.github.io/">Meteodenny <strong></strong></a></h1>
-          </header><!-- /#banner -->
-
-            <div id="navigation" class="navbar row">
-              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
-             
-              <ul class="columns">
-                <li><a href="http://dennissergeev.github.io/">Home</a></li>
-
-                <li><a href="http://dennissergeev.github.io/pages/about-me.html">About</a></li>
-
-              </ul>
-            </div>
-
-<section id="content" class="body">
-
-   <div class="row">
-        <div class="eleven columns">
-
-
-            <header>
-              <h2 class="entry-title">
-                <a href="http://dennissergeev.github.io/testing-ipython-notebook-plugin.html" rel="bookmark"
-                   title="Permalink to Testing IPython Notebook plugin">Testing IPython Notebook plugin</a></h2>
-           
-            </header>
-            <footer class="post-info">
-              <abbr class="published" title="2015-07-18T22:36:00+01:00">
-                Sat 18 July 2015
-              </abbr>
-              <address class="vcard author">By 
-                <a class="url fn" href="http://dennissergeev.github.io/author/denis-sergeev.html"> Denis Sergeev</a>
-              </address>
-            </footer><!-- /.post-info -->
-            <div class="entry-content">
-              <p>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This line is written in markdown.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s">&#39;ggplot&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;r&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-<div class="output_area"><div class="prompt"></div>
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAX4AAAEECAYAAAAvY19bAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAX4AAAEECAYAAAAvY19bAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xl8VNXdP/DPnZl7ZyY7EyWYABp2MiELhF1EENRWrVhr
 XKqtoKUP4FJbtaA/lT5IrbbSR3HhZcXSautTrJoHpVYWZZFVspKEAEEEBAFJyD7LvTP398eQlEDW
 mbn33OX7fr14vbLc3PMhzHw599xzzuVkWZZBCCHENCysAxBCCFEXFX5CCDEZKvyEEGIyVPgJIcRk
@@ -366,91 +300,105 @@ YZysc1p+Tc6ePRvLly+HJEltU4y15oorrsBVV12FhQsXguM4pKenY8aMGZ0eT1s2EEKIyWh2Oich
 hBBlUOEnhBCTocJPCCEmQ4WfEEJMhgo/IYSYDBV+QggxGSr8hBBiMlT4CSHEZP4/TsbGl/C9yiUA
 AAAASUVORK5CYII=
 "
->
-</div>
+&gt;
+&lt;/div&gt;
 
-</div>
+&lt;/div&gt;
 
-</div>
-</div>
+&lt;/div&gt;
+&lt;/div&gt;
 
-</div></p>
-            </div><!-- /.entry-content -->
-
-
-        </div><!-- /.eleven.columns -->
-
-<div class="three columns">
-
-<h4>Pages</h4>
-
- <ul>
-      <li><a href="http://dennissergeev.github.io/pages/about-me.html">About</a></li>
-  </ul>
-
-<h4>Categories</h4>
-<ul>
-		<li><a href="http://dennissergeev.github.io/category/misc.html">misc</a></li>
-		<li><a href="http://dennissergeev.github.io/category/miscellanea.html">Miscellanea</a></li>
-		<li><a href="http://dennissergeev.github.io/category/python.html">Python</a></li>
-</ul>
-
-
-<h4>Tags</h4>
-	<ul>
-</ul>
-
-
-<nav class="widget">
-  <h4>Social</h4>
-  <ul>
-    <li><a href="#">You can add links in your config file</a></li>
-    <li><a href="#">Another social link</a></li>
-  </ul>
-</nav>
-
-</div> </div><!-- /.row -->
-
-
-</section>
-
-       </div><!-- /.row -->
-    </div><!-- /.container -->
-
-
-       <div class="container.nopad bg">
-
-    
-        <footer id="credits" class="row">
-          <div class="seven columns left-center">
-
-                   <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a>.
-                    <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
-                    </address>
-          </div>
-
-
-          <div class="seven columns">
-            <div class="row">
-              <ul class="socbtns">
-
-
-
-
-
-              </ul>
-            </div>
-          </div>
-        </footer>
-
-    </div>
-
-
-  <script src="http://dennissergeev.github.io/theme/js/libs/jquery-1.9.1.min.js"></script>
-  <script src="http://dennissergeev.github.io/theme/js/libs/gumby.min.js"></script>
-  <script src="http://dennissergeev.github.io/theme/js/plugins.js"></script>
-</body>
-</html>
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>My super title</title><link href="http://dennissergeev.github.io/my-super-post.html" rel="alternate"></link><updated>2015-07-16T00:44:00+01:00</updated><author><name>Denis Sergeev</name></author><id>tag:dennissergeev.github.io,2015-07-16:my-super-post.html</id><summary type="html">&lt;p&gt;This is the content of my super blog post.&lt;/p&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry><entry><title>Blogger's creed</title><link href="http://dennissergeev.github.io/bloggers-creed.html" rel="alternate"></link><updated>2015-07-16T00:00:00+01:00</updated><author><name>Denis Sergeev</name></author><id>tag:dennissergeev.github.io,2015-07-16:bloggers-creed.html</id><summary type="html">&lt;p&gt;This is my blog. There are many like it, but this one is mine.&lt;/p&gt;</summary><category term="python"></category></entry><entry><title>Python packages to calculate wind field quantities</title><link href="http://dennissergeev.github.io/wind-field-quantities-in-python.html" rel="alternate"></link><updated>2014-12-16T16:26:20+00:00</updated><author><name>dennissergeev</name></author><id>tag:dennissergeev.github.io,2014-12-16:wind-field-quantities-in-python.html</id><summary type="html">&lt;p&gt;&lt;em&gt;This post is merely sort of my own "lab notes", and I have to test the packages on a common simple example with known result. So I hope to rewrite it sooner or later.&lt;/em&gt; Anyway, below are the links to some of the Python packages that have functions for calculating such wind field quantities as divergence and vorticity (curl, rotor). I am not yet sure what I'm going to use in my research, maybe it's better to write my own Python function. Or write it in Fortran and wrap it with f2py. Or simply use &lt;strong&gt;Iris&lt;/strong&gt; package (see update below!). &lt;/p&gt;
+&lt;h2&gt;&lt;a href="http://ajdawson.github.io/windspharm/"&gt;Windspharm&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;At first the most promising package seemed to be windspharm, which is a "Python package for performing computations on global wind fields in spherical geometry". For computations it uses spherical harmonics and depends on a NCAR's SPHEREPACK library, access to which is provided by a wrapper &lt;a href="https://code.google.com/p/pyspharm/"&gt;pyspharm&lt;/a&gt;. This dependency is for some reason never mentioned on the winspharm's website (two possible reasons: I'm blind or it is too obvious). A very good step-by-step example of using the package can be found &lt;a href="https://ocefpaf.github.io/python4oceanographers/blog/2014/04/28/windspharm/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Pros:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Well-written and makes the code more readable&lt;/li&gt;
+&lt;li&gt;Consists of several tools that make it easy to prepare data for the processing&lt;/li&gt;
+&lt;li&gt;The working object VectorWind has 3 interfaces: "standard" - to work with NumPy arrays, "iris" - to work with Iris cubes, and "cdms" - to work with cdms2 variables. "The only differences are that the windspharm.iris and windspharm.cdms interfaces also use the meta-data stored in input variables to construct outputs with meta-data".&lt;/li&gt;
+&lt;li&gt;Capable of computation of such quantities as: divergence, vorticity, streamfunction, velocity potential, irrotational, and non-divergent components of the wind, vector gradient of a scalar function, magnitude (wind speed).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cons:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Can be applied only for global fields (spherical harmonics!)&lt;/li&gt;
+&lt;li&gt;Computes only a vertical component of vorticity (dv/dx - du/dy)&lt;/li&gt;
+&lt;li&gt;Does not accept missing values (NaN) nor masked array (solution from the site above - fill the missing values with zeros and then reapply the mask to the result)&lt;/li&gt;
+&lt;li&gt;Rather strange requirements to the input arrays - the leading dimension has to be latitude, and the latitude dimension has to be north-to-south. This can be a source of mistakes in the code, but the bundled tools make it very easy to arrange the data correctly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a href="http://www.johnny-lin.com/py_pkgs/atmqty/doc/manual.html"&gt;AtmQty library&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This package offers a wide set of various meteorology-related functions, so you don't need to invent a wheel every time you write a programme in Python. As the website claims, the package "contains methods to calculate atmospheric quantities that are directly derivative (i.e. not requiring time integration or modeling) from standard state variables".&lt;/p&gt;
+&lt;p&gt;Among the multitude of functions there is a method that provides a method to calculate the relative vorticity and even the isentropic potential vorticity. Just skimming through the source code, I can say that the vorticity calculation is done by using a &lt;a href="http://www.johnny-lin.com/py_pkgs/gemath/doc/curl_2d.html"&gt;curl&lt;/a&gt; operator from &lt;a href="http://www.johnny-lin.com/py_pkgs/gemath/doc/index.html"&gt;gemath&lt;/a&gt; package. The curl operator offers different algorithms of calculation, default being set to the first-order finite-differencing (back-ward and forward differencing used at the endpoints, and centered differencing used everywhere else). For calculations on a sphere it can use SPHEREPACK, if available. However, there can be no missing values in the input data.&lt;/p&gt;
+&lt;h3&gt;Pros:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Has several calculation algorithms&lt;/li&gt;
+&lt;li&gt;Allows computations on a limited area domain (default is spherical)&lt;/li&gt;
+&lt;li&gt;Has an extensive documentation and examples, including an &lt;a href="http://www.johnny-lin.com/py_pkgs/atmqty/doc/test_vort.html"&gt;example&lt;/a&gt; of calculating relative vorticity and comparing the result with ERA-40 reanalysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cons:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Is dependent on gemath package and/or SPHEREPACK library&lt;/li&gt;
+&lt;li&gt;When using finite differences on a spherical grid, values north of 88N or south of 88S latitude are set to missing automatically (because of singularities in the algorithm near the poles)&lt;/li&gt;
+&lt;li&gt;Computes only a vertical component of vorticity (dv/dx - du/dy)&lt;/li&gt;
+&lt;li&gt;Seems to be abandoned since 2004 (instead see PyAOS below)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a href="https://github.com/PyAOS/aoslib"&gt;PyAOS library&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;According to the disclaimer, it is "a Python library of standard atmospheric and oceanic sciences calculation routines. It exists mainly so we're all not writing our own routines to calculate potential temperature, isentropic potential vorticity, etc". It is basically a Python wrapper around a library written in Fortran-77. It is most likely a successor of the AtmQty library. This is probably good for speeding up the calculations, though I'm not a fan of the 77 version of Fortran. The subroutine that calculates vorticity is in g2gkinematics.f file and simply employs a centred differences method.&lt;/p&gt;
+&lt;h3&gt;Pros:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The library itself is a pretty large collection of AOS-related methods&lt;/li&gt;
+&lt;li&gt;Presumably fast enough due to code written in Fortran&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cons:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Limited functionality, at least in the vorticity calculations&lt;/li&gt;
+&lt;li&gt;Computes only a vertical component of vorticity (dv/dx - du/dy)&lt;/li&gt;
+&lt;li&gt;Requires compilation that makes it difficult to change the source code "on-the-go"&lt;/li&gt;
+&lt;li&gt;Perhaps not the most dynamically developing project&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a href="https://wiki.uib.no/gfi/index.php/Dynlib"&gt;Dynlib&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The Dynlib library is developed at Geophysical Institute, University of Bergen. The project has a beautiful wiki page (the link in the header). The code is written in Fortran-95, mostly by C. Spensberger.&lt;/p&gt;
+&lt;p&gt;The subroutine that calculates relative vorticity uses centred differences, but returns zeros at the edges for a non-cyclic grid.&lt;/p&gt;
+&lt;h3&gt;Pros:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The library itself offers an impressive collection of functions that are used in geophysical fluid dynamics, including geostrophic quantities, wind field deformation, etc.&lt;/li&gt;
+&lt;li&gt;Presumably fast enough due to code written in Fortran&lt;/li&gt;
+&lt;li&gt;The source code is well-written and very readable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cons:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Limited functionality, at least in the vorticity calculations&lt;/li&gt;
+&lt;li&gt;Computes only a vertical component of vorticity (dv/dx - du/dy)&lt;/li&gt;
+&lt;li&gt;Requires compilation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a href="http://www.malg.eu/vector_field_params.php"&gt;Vector field parameters&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Looking for a ready solution to the wind field processing, a while ago I run across this script. Since it is posted in a blog dedicated to GIS programming, "input data must be provided as two Arc/Info ASCII grids, storing the x- and y-components of the vector field". The results are also stored in ASCII grids.&lt;/p&gt;
+&lt;p&gt;Vorticity (and couple of other field quantities) are computed simply by using NumPy gradient, which by default uses centred differences in the interior points.&lt;/p&gt;
+&lt;h3&gt;Pros:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Good for GIS-users&lt;/li&gt;
+&lt;li&gt;Pure Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cons:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Computes only a vertical component of vorticity (dv/dx - du/dy)&lt;/li&gt;
+&lt;li&gt;ASCII grids I/O&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a href="https://github.com/GeoscienceAustralia/tcrm/tree/master/Utilities"&gt;Geoscience Australia repository&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Another trivial example of vorticity calculation (again only z-component) is embedded in TCRM model (A statistical-parametric model for assessing wind hazard from tropical cyclones). The code is in pure Python, though the vorticity function depends on another function that converts lon/lat grid step to distance in meters.&lt;/p&gt;
+&lt;h3&gt;Pros:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Simple code, can be a starting point to write something more&lt;/li&gt;
+&lt;li&gt;Pure Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cons:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Computes only a vertical component of vorticity (dv/dx – du/dy)&lt;/li&gt;
+&lt;li&gt;The computation is done by using explicit differentiation in two loops, which is probably quite slow&lt;/li&gt;
+&lt;li&gt;The returned array is reduced in size by 2 elements in each dimension (so they do not use a forward/backward scheme at the boundaries)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I didn’t find out if CDAT has functions to calculate vorticity, but I tend to think that it uses spherical harmonics and hence allows the computations only on a global grid and only of a vertical component of vorticity.&lt;/p&gt;
+&lt;h2&gt;Update:&lt;/h2&gt;
+&lt;h3&gt;Iris&lt;/h3&gt;
+&lt;p&gt;I discovered that Iris package actually has functions to calculate the finite differences and curl operator in Cartesian or spherical coordinates. It has some limitations and is being developed to work with Iris cubes, but it is the closest solution to what I had in mind writing this post. Here is the link to Iris’ calculus functions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://scitools.org.uk/iris/docs/latest/iris/iris/analysis/calculus.html"&gt;Iris Calculus&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I hope that Iris team will continue to develop the calculus submodule and will make it as awesome as the rest of the package.&lt;/p&gt;</summary><category term="python"></category><category term="meteorology"></category></entry></feed>
