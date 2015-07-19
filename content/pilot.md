@@ -1,5 +1,5 @@
 Title: Blogger's creed
-Date: 2015-07-16
+Date: 2014-07-16
 Category: Miscellanea
 Tags: python
 
