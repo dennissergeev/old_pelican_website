@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <title>Python packages to calculate wind field quantities</title>
+        <meta charset="utf-8" />
+
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="/theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/pygment.css" />
+
+        <script src="/theme/js/libs/modernizr-2.6.2.min.js"></script>
+
+
+
+
+</head>
+
+<body id="index" class="home">
+
+
+    <div class="container">
+
+        <div class="row">
+
+          <header id="banner" class="body">
+                  <h1><a href="/">Meteodenny <strong></strong></a></h1>
+          </header><!-- /#banner -->
+
+            <div id="navigation" class="navbar row">
+              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
+             
+              <ul class="columns">
+                <li><a href="/">Home</a></li>
+
+                <li><a href="/pages/about-me.html">About</a></li>
+
+              </ul>
+            </div>
+
+<section id="content" class="body">
+
+   <div class="row">
+        <div class="eleven columns">
+
+
+            <header>
+              <h2 class="entry-title">
+                <a href="/wind-field-quantities-in-python.html" rel="bookmark"
+                   title="Permalink to Python packages to calculate wind field quantities">Python packages to calculate wind field quantities</a></h2>
+           
+            </header>
+            <footer class="post-info">
+              <abbr class="published" title="2014-12-16T16:26:20+00:00">
+                Tue 16 December 2014
+              </abbr>
+              <address class="vcard author">By 
+                <a class="url fn" href="/author/dennissergeev.html"> dennissergeev</a>
+              </address>
+            </footer><!-- /.post-info -->
+            <div class="entry-content">
+              <h1>Python packages to calculate wind field quantities</h1>
+<p><em>This post is merely sort of my own "lab notes", and I have to test the packages on a common simple example with known result. So I hope to rewrite it sooner or later.</em> Anyway, below are the links to some of the Python packages that have functions for calculating such wind field quantities as divergence and vorticity (curl, rotor). I am not yet sure what I'm going to use in my research, maybe it's better to write my own Python function. Or write it in Fortran and wrap it with f2py. Or simply use <strong>Iris</strong> package (see update below!). </p>
+<h1>Windspharm</h1>
+<h3>(http://ajdawson.github.io/windspharm/)</h3>
+<p>At first the most promising package seemed to be windspharm, which is a "Python package for performing computations on global wind fields in spherical geometry". For computations it uses spherical harmonics and depends on a NCAR's SPHEREPACK library, access to which is provided by a wrapper <a href="https://code.google.com/p/pyspharm/">pyspharm</a>. This dependency is for some reason never mentioned on the winspharm's website (two possible reasons: I'm blind or it is too obvious). A very good step-by-step example of using the package can be found <a href="https://ocefpaf.github.io/python4oceanographers/blog/2014/04/28/windspharm/">here</a>.</p>
+<h5>Pros:</h5>
+<ul>
+<li>Well-written and makes the code more readable</li>
+<li>Consists of several tools that make it easy to prepare data for the processing</li>
+<li>The working object VectorWind has 3 interfaces: "standard" - to work with NumPy arrays, "iris" - to work with Iris cubes, and "cdms" - to work with cdms2 variables. "The only differences are that the windspharm.iris and windspharm.cdms interfaces also use the meta-data stored in input variables to construct outputs with meta-data".</li>
+<li>Capable of computation of such quantities as: divergence, vorticity, streamfunction, velocity potential, irrotational, and non-divergent components of the wind, vector gradient of a scalar function, magnitude (wind speed).</li>
+</ul>
+<h5>Cons:</h5>
+<ul>
+<li>Can be applied only for global fields (spherical harmonics!)</li>
+<li>Computes only a vertical component of vorticity (dv/dx - du/dy)</li>
+<li>Does not accept missing values (NaN) nor masked array (solution from the site above - fill the missing values with zeros and then reapply the mask to the result)</li>
+<li>Rather strange requirements to the input arrays - the leading dimension has to be latitude, and the latitude dimension has to be north-to-south. This can be a source of mistakes in the code, but the bundled tools make it very easy to arrange the data correctly.</li>
+</ul>
+<h1>AtmQty library</h1>
+<h3>(http://www.johnny-lin.com/py_pkgs/atmqty/doc/manual.html)</h3>
+<p>This package offers a wide set of various meteorology-related functions, so you don't need to invent a wheel every time you write a programme in Python. As the website claims, the package "contains methods to calculate atmospheric quantities that are directly derivative (i.e. not requiring time integration or modeling) from standard state variables".</p>
+<p>Among the multitude of functions there is a method that provides a method to calculate the relative vorticity and even the isentropic potential vorticity. Just skimming through the source code, I can say that the vorticity calculation is done by using a <a href="http://www.johnny-lin.com/py_pkgs/gemath/doc/curl_2d.html">curl</a> operator from <a href="http://www.johnny-lin.com/py_pkgs/gemath/doc/index.html">gemath</a> package. The curl operator offers different algorithms of calculation, default being set to the first-order finite-differencing (back-ward and forward differencing used at the endpoints, and centered differencing used everywhere else). For calculations on a sphere it can use SPHEREPACK, if available. However, there can be no missing values in the input data.</p>
+<h5>Pros:</h5>
+<ul>
+<li>Has several calculation algorithms</li>
+<li>Allows computations on a limited area domain (default is spherical)</li>
+<li>Has an extensive documentation and examples, including an <a href="http://www.johnny-lin.com/py_pkgs/atmqty/doc/test_vort.html">example</a> of calculating relative vorticity and comparing the result with ERA-40 reanalysis</li>
+</ul>
+<h5>Cons:</h5>
+<ul>
+<li>Is dependent on gemath package and/or SPHEREPACK library</li>
+<li>When using finite differences on a spherical grid, values north of 88N or south of 88S latitude are set to missing automatically (because of singularities in the algorithm near the poles)</li>
+<li>Computes only a vertical component of vorticity (dv/dx - du/dy)</li>
+<li>Seems to be abandoned since 2004 (instead see PyAOS below)</li>
+</ul>
+<h1>PyAOS library</h1>
+<h3>(https://github.com/PyAOS/aoslib)</h3>
+<p>According to the disclaimer, it is "a Python library of standard atmospheric and oceanic sciences calculation routines. It exists mainly so we're all not writing our own routines to calculate potential temperature, isentropic potential vorticity, etc". It is basically a Python wrapper around a library written in Fortran-77. It is most likely a successor of the AtmQty library. This is probably good for speeding up the calculations, though I'm not a fan of the 77 version of Fortran. The subroutine that calculates vorticity is in g2gkinematics.f file and simply employs a centred differences method.</p>
+<h5>Pros:</h5>
+<ul>
+<li>The library itself is a pretty large collection of AOS-related methods</li>
+<li>Presumably fast enough due to code written in Fortran</li>
+</ul>
+<h5>Cons:</h5>
+<ul>
+<li>Limited functionality, at least in the vorticity calculations</li>
+<li>Computes only a vertical component of vorticity (dv/dx - du/dy)</li>
+<li>Requires compilation that makes it difficult to change the source code "on-the-go"</li>
+<li>Perhaps not the most dynamically developing project</li>
+</ul>
+<h1>Dynlib</h1>
+<h3>(https://wiki.uib.no/gfi/index.php/Dynlib)</h3>
+<p>The Dynlib library is developed at Geophysical Institute, University of Bergen. The project has a beautiful wiki page (the link in the header). The code is written in Fortran-95, mostly by C. Spensberger.</p>
+<p>The subroutine that calculates relative vorticity uses centred differences, but returns zeros at the edges for a non-cyclic grid.</p>
+<h5>Pros:</h5>
+<ul>
+<li>The library itself offers an impressive collection of functions that are used in geophysical fluid dynamics, including geostrophic quantities, wind field deformation, etc.</li>
+<li>Presumably fast enough due to code written in Fortran</li>
+<li>The source code is well-written and very readable</li>
+</ul>
+<h5>Cons:</h5>
+<ul>
+<li>Limited functionality, at least in the vorticity calculations</li>
+<li>Computes only a vertical component of vorticity (dv/dx - du/dy)</li>
+<li>Requires compilation</li>
+</ul>
+<h1>Vector field parameters</h1>
+<h3>(http://www.malg.eu/vector_field_params.php)</h3>
+<p>Looking for a ready solution to the wind field processing, a while ago I run across this script. Since it is posted in a blog dedicated to GIS programming, "input data must be provided as two Arc/Info ASCII grids, storing the x- and y-components of the vector field". The results are also stored in ASCII grids.</p>
+<p>Vorticity (and couple of other field quantities) are computed simply by using NumPy gradient, which by default uses centred differences in the interior points.</p>
+<h5>Pros:</h5>
+<ul>
+<li>Good for GIS-users</li>
+<li>Pure Python</li>
+</ul>
+<h5>Cons:</h5>
+<ul>
+<li>Computes only a vertical component of vorticity (dv/dx - du/dy)</li>
+<li>ASCII grids I/O</li>
+</ul>
+<h1>Geoscience Australia repository</h1>
+<h3>(https://github.com/GeoscienceAustralia/tcrm/tree/master/Utilities)</h3>
+            </div><!-- /.entry-content -->
+
+
+        </div><!-- /.eleven.columns -->
+
+<div class="three columns">
+
+<h4>Pages</h4>
+
+ <ul>
+      <li><a href="/pages/about-me.html">About</a></li>
+  </ul>
+
+<h4>Categories</h4>
+<ul>
+		<li><a href="/category/misc.html">misc</a></li>
+		<li><a href="/category/miscellanea.html">Miscellanea</a></li>
+		<li><a href="/category/python.html">Python</a></li>
+</ul>
+
+
+<h4>Tags</h4>
+	<ul>
+</ul>
+
+
+<nav class="widget">
+  <h4>Social</h4>
+  <ul>
+    <li><a href="#">You can add links in your config file</a></li>
+    <li><a href="#">Another social link</a></li>
+  </ul>
+</nav>
+
+</div> </div><!-- /.row -->
+
+
+</section>
+
+       </div><!-- /.row -->
+    </div><!-- /.container -->
+
+
+       <div class="container.nopad bg">
+
+    
+        <footer id="credits" class="row">
+          <div class="seven columns left-center">
+
+                   <address id="about" class="vcard body">
+                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                    which takes great advantage of <a href="http://python.org">Python</a>.
+                    <br />
+                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
+                    </address>
+          </div>
+
+
+          <div class="seven columns">
+            <div class="row">
+              <ul class="socbtns">
+
+
+
+
+
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+    </div>
+
+
+  <script src="/theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="/theme/js/libs/gumby.min.js"></script>
+  <script src="/theme/js/plugins.js"></script>
+</body>
+</html>
