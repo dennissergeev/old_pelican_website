@@ -152,8 +152,8 @@
 <li>The returned array is reduced in size by 2 elements in each dimension (so they do not use a forward/backward scheme at the boundaries)</li>
 </ul>
 <p>I didn’t find out if CDAT has functions to calculate vorticity, but I tend to think that it uses spherical harmonics and hence allows the computations only on a global grid and only of a vertical component of vorticity.</p>
-<p>Update:</p>
-<p>Iris</p>
+<h2>Update:</h2>
+<h3>Iris</h3>
 <p>I discovered that Iris package actually has functions to calculate the finite differences and curl operator in Cartesian or spherical coordinates. It has some limitations and is being developed to work with Iris cubes, but it is the closest solution to what I had in mind writing this post. Here is the link to Iris’ calculus functions:</p>
 <p><a href="http://scitools.org.uk/iris/docs/latest/iris/iris/analysis/calculus.html">Iris Calculus</a></p>
 <p>I hope that Iris team will continue to develop the calculus submodule and will make it as awesome as the rest of the package.</p>
