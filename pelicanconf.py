@@ -8,13 +8,13 @@ SITEURL = ''
 
 PATH = 'content'
 
-THEME = 'pelican-themes/gum'
+THEME = '../pelican-themes/gum'
 
 TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = u'en'
 
-PLUGIN_PATHS = ['pelican-plugins']
+PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = ['liquid_tags.notebook']
 
 NOTEBOOK_DIR = 'notebooks'

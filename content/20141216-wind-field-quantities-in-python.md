@@ -109,9 +109,9 @@ Another trivial example of vorticity calculation (again only z-component) is emb
 
 I didn’t find out if CDAT has functions to calculate vorticity, but I tend to think that it uses spherical harmonics and hence allows the computations only on a global grid and only of a vertical component of vorticity.
 
-Update:
+## Update:
 
-Iris
+### Iris
 
 I discovered that Iris package actually has functions to calculate the finite differences and curl operator in Cartesian or spherical coordinates. It has some limitations and is being developed to work with Iris cubes, but it is the closest solution to what I had in mind writing this post. Here is the link to Iris’ calculus functions:
 
