@@ -63,89 +63,100 @@
               </address>
             </footer><!-- /.post-info -->
             <div class="entry-content">
-              <h1>Python packages to calculate wind field quantities</h1>
-<p><em>This post is merely sort of my own "lab notes", and I have to test the packages on a common simple example with known result. So I hope to rewrite it sooner or later.</em> Anyway, below are the links to some of the Python packages that have functions for calculating such wind field quantities as divergence and vorticity (curl, rotor). I am not yet sure what I'm going to use in my research, maybe it's better to write my own Python function. Or write it in Fortran and wrap it with f2py. Or simply use <strong>Iris</strong> package (see update below!). </p>
-<h1>Windspharm</h1>
-<h3>(http://ajdawson.github.io/windspharm/)</h3>
+              <p><em>This post is merely sort of my own "lab notes", and I have to test the packages on a common simple example with known result. So I hope to rewrite it sooner or later.</em> Anyway, below are the links to some of the Python packages that have functions for calculating such wind field quantities as divergence and vorticity (curl, rotor). I am not yet sure what I'm going to use in my research, maybe it's better to write my own Python function. Or write it in Fortran and wrap it with f2py. Or simply use <strong>Iris</strong> package (see update below!). </p>
+<h2><a href="http://ajdawson.github.io/windspharm/">Windspharm</a></h2>
 <p>At first the most promising package seemed to be windspharm, which is a "Python package for performing computations on global wind fields in spherical geometry". For computations it uses spherical harmonics and depends on a NCAR's SPHEREPACK library, access to which is provided by a wrapper <a href="https://code.google.com/p/pyspharm/">pyspharm</a>. This dependency is for some reason never mentioned on the winspharm's website (two possible reasons: I'm blind or it is too obvious). A very good step-by-step example of using the package can be found <a href="https://ocefpaf.github.io/python4oceanographers/blog/2014/04/28/windspharm/">here</a>.</p>
-<h5>Pros:</h5>
+<h3>Pros:</h3>
 <ul>
 <li>Well-written and makes the code more readable</li>
 <li>Consists of several tools that make it easy to prepare data for the processing</li>
 <li>The working object VectorWind has 3 interfaces: "standard" - to work with NumPy arrays, "iris" - to work with Iris cubes, and "cdms" - to work with cdms2 variables. "The only differences are that the windspharm.iris and windspharm.cdms interfaces also use the meta-data stored in input variables to construct outputs with meta-data".</li>
 <li>Capable of computation of such quantities as: divergence, vorticity, streamfunction, velocity potential, irrotational, and non-divergent components of the wind, vector gradient of a scalar function, magnitude (wind speed).</li>
 </ul>
-<h5>Cons:</h5>
+<h3>Cons:</h3>
 <ul>
 <li>Can be applied only for global fields (spherical harmonics!)</li>
 <li>Computes only a vertical component of vorticity (dv/dx - du/dy)</li>
 <li>Does not accept missing values (NaN) nor masked array (solution from the site above - fill the missing values with zeros and then reapply the mask to the result)</li>
 <li>Rather strange requirements to the input arrays - the leading dimension has to be latitude, and the latitude dimension has to be north-to-south. This can be a source of mistakes in the code, but the bundled tools make it very easy to arrange the data correctly.</li>
 </ul>
-<h1>AtmQty library</h1>
-<h3>(http://www.johnny-lin.com/py_pkgs/atmqty/doc/manual.html)</h3>
+<h2><a href="http://www.johnny-lin.com/py_pkgs/atmqty/doc/manual.html">AtmQty library</a></h2>
 <p>This package offers a wide set of various meteorology-related functions, so you don't need to invent a wheel every time you write a programme in Python. As the website claims, the package "contains methods to calculate atmospheric quantities that are directly derivative (i.e. not requiring time integration or modeling) from standard state variables".</p>
 <p>Among the multitude of functions there is a method that provides a method to calculate the relative vorticity and even the isentropic potential vorticity. Just skimming through the source code, I can say that the vorticity calculation is done by using a <a href="http://www.johnny-lin.com/py_pkgs/gemath/doc/curl_2d.html">curl</a> operator from <a href="http://www.johnny-lin.com/py_pkgs/gemath/doc/index.html">gemath</a> package. The curl operator offers different algorithms of calculation, default being set to the first-order finite-differencing (back-ward and forward differencing used at the endpoints, and centered differencing used everywhere else). For calculations on a sphere it can use SPHEREPACK, if available. However, there can be no missing values in the input data.</p>
-<h5>Pros:</h5>
+<h3>Pros:</h3>
 <ul>
 <li>Has several calculation algorithms</li>
 <li>Allows computations on a limited area domain (default is spherical)</li>
 <li>Has an extensive documentation and examples, including an <a href="http://www.johnny-lin.com/py_pkgs/atmqty/doc/test_vort.html">example</a> of calculating relative vorticity and comparing the result with ERA-40 reanalysis</li>
 </ul>
-<h5>Cons:</h5>
+<h3>Cons:</h3>
 <ul>
 <li>Is dependent on gemath package and/or SPHEREPACK library</li>
 <li>When using finite differences on a spherical grid, values north of 88N or south of 88S latitude are set to missing automatically (because of singularities in the algorithm near the poles)</li>
 <li>Computes only a vertical component of vorticity (dv/dx - du/dy)</li>
 <li>Seems to be abandoned since 2004 (instead see PyAOS below)</li>
 </ul>
-<h1>PyAOS library</h1>
-<h3>(https://github.com/PyAOS/aoslib)</h3>
+<h2><a href="https://github.com/PyAOS/aoslib">PyAOS library</a></h2>
 <p>According to the disclaimer, it is "a Python library of standard atmospheric and oceanic sciences calculation routines. It exists mainly so we're all not writing our own routines to calculate potential temperature, isentropic potential vorticity, etc". It is basically a Python wrapper around a library written in Fortran-77. It is most likely a successor of the AtmQty library. This is probably good for speeding up the calculations, though I'm not a fan of the 77 version of Fortran. The subroutine that calculates vorticity is in g2gkinematics.f file and simply employs a centred differences method.</p>
-<h5>Pros:</h5>
+<h3>Pros:</h3>
 <ul>
 <li>The library itself is a pretty large collection of AOS-related methods</li>
 <li>Presumably fast enough due to code written in Fortran</li>
 </ul>
-<h5>Cons:</h5>
+<h3>Cons:</h3>
 <ul>
 <li>Limited functionality, at least in the vorticity calculations</li>
 <li>Computes only a vertical component of vorticity (dv/dx - du/dy)</li>
 <li>Requires compilation that makes it difficult to change the source code "on-the-go"</li>
 <li>Perhaps not the most dynamically developing project</li>
 </ul>
-<h1>Dynlib</h1>
-<h3>(https://wiki.uib.no/gfi/index.php/Dynlib)</h3>
+<h2><a href="https://wiki.uib.no/gfi/index.php/Dynlib">Dynlib</a></h2>
 <p>The Dynlib library is developed at Geophysical Institute, University of Bergen. The project has a beautiful wiki page (the link in the header). The code is written in Fortran-95, mostly by C. Spensberger.</p>
 <p>The subroutine that calculates relative vorticity uses centred differences, but returns zeros at the edges for a non-cyclic grid.</p>
-<h5>Pros:</h5>
+<h3>Pros:</h3>
 <ul>
 <li>The library itself offers an impressive collection of functions that are used in geophysical fluid dynamics, including geostrophic quantities, wind field deformation, etc.</li>
 <li>Presumably fast enough due to code written in Fortran</li>
 <li>The source code is well-written and very readable</li>
 </ul>
-<h5>Cons:</h5>
+<h3>Cons:</h3>
 <ul>
 <li>Limited functionality, at least in the vorticity calculations</li>
 <li>Computes only a vertical component of vorticity (dv/dx - du/dy)</li>
 <li>Requires compilation</li>
 </ul>
-<h1>Vector field parameters</h1>
-<h3>(http://www.malg.eu/vector_field_params.php)</h3>
+<h2><a href="http://www.malg.eu/vector_field_params.php">Vector field parameters</a></h2>
 <p>Looking for a ready solution to the wind field processing, a while ago I run across this script. Since it is posted in a blog dedicated to GIS programming, "input data must be provided as two Arc/Info ASCII grids, storing the x- and y-components of the vector field". The results are also stored in ASCII grids.</p>
 <p>Vorticity (and couple of other field quantities) are computed simply by using NumPy gradient, which by default uses centred differences in the interior points.</p>
-<h5>Pros:</h5>
+<h3>Pros:</h3>
 <ul>
 <li>Good for GIS-users</li>
 <li>Pure Python</li>
 </ul>
-<h5>Cons:</h5>
+<h3>Cons:</h3>
 <ul>
 <li>Computes only a vertical component of vorticity (dv/dx - du/dy)</li>
 <li>ASCII grids I/O</li>
 </ul>
-<h1>Geoscience Australia repository</h1>
-<h3>(https://github.com/GeoscienceAustralia/tcrm/tree/master/Utilities)</h3>
+<h2><a href="https://github.com/GeoscienceAustralia/tcrm/tree/master/Utilities">Geoscience Australia repository</a></h2>
+<p>Another trivial example of vorticity calculation (again only z-component) is embedded in TCRM model (A statistical-parametric model for assessing wind hazard from tropical cyclones). The code is in pure Python, though the vorticity function depends on another function that converts lon/lat grid step to distance in meters.</p>
+<h3>Pros:</h3>
+<ul>
+<li>Simple code, can be a starting point to write something more</li>
+<li>Pure Python</li>
+</ul>
+<h3>Cons:</h3>
+<ul>
+<li>Computes only a vertical component of vorticity (dv/dx – du/dy)</li>
+<li>The computation is done by using explicit differentiation in two loops, which is probably quite slow</li>
+<li>The returned array is reduced in size by 2 elements in each dimension (so they do not use a forward/backward scheme at the boundaries)</li>
+</ul>
+<p>I didn’t find out if CDAT has functions to calculate vorticity, but I tend to think that it uses spherical harmonics and hence allows the computations only on a global grid and only of a vertical component of vorticity.</p>
+<p>Update:</p>
+<p>Iris</p>
+<p>I discovered that Iris package actually has functions to calculate the finite differences and curl operator in Cartesian or spherical coordinates. It has some limitations and is being developed to work with Iris cubes, but it is the closest solution to what I had in mind writing this post. Here is the link to Iris’ calculus functions:</p>
+<p><a href="http://scitools.org.uk/iris/docs/latest/iris/iris/analysis/calculus.html">Iris Calculus</a></p>
+<p>I hope that Iris team will continue to develop the calculus submodule and will make it as awesome as the rest of the package.</p>
             </div><!-- /.entry-content -->
 
 
