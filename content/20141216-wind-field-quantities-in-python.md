@@ -1,14 +1,8 @@
 title: Python packages to calculate wind field quantities
-link: https://dennissergeev.wordpress.com/2014/12/16/wind-field-quantities-in-python/
 author: dennissergeev
-description: 
-post_id: 171
-created: 2014/12/16 16:26:20
-created_gmt: 2014/12/16 16:26:20
-comment_status: open
-post_name: wind-field-quantities-in-python
-status: publish
-post_type: post
+date: 2014-12-16 16:26:20
+Tags: python, meteorology
+slug: wind-field-quantities-in-python
 
 # Python packages to calculate wind field quantities
 
