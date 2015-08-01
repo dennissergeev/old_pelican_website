@@ -7,6 +7,7 @@ SITENAME = u'Meteodenny'
 SITEURL = ''
 
 PATH = 'content'
+STATIC_PATHS = ['pdfs']
 
 THEME = '../pelican-themes/gum'
 
