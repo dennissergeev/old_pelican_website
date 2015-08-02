@@ -7,10 +7,13 @@ SITENAME = u'Meteodenny'
 SITEURL = ''
 
 PATH = 'content'
-STATIC_PATHS = ['pdfs']
+STATIC_PATHS = ['pdfs', 'extra/favicon.ico']
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {'path': 'favicon.ico'}
+}
 
-#THEME = '../pelican-themes/bootstrap2'
-THEME = '../my-theme'
+THEME = '../test-theme'
+#THEME = '../my-theme'
 
 TIMEZONE = 'Europe/London'
 
