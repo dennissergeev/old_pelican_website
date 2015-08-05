@@ -12,8 +12,7 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
-THEME = '../test-theme'
-#THEME = '../my-theme'
+THEME = '../theme4myblog'
 
 TIMEZONE = 'Europe/London'
 
@@ -62,6 +61,7 @@ DEFAULT_PAGINATION = 5
 # Sharing
 TWITTER_WIDGET_ID = 3063887915
 TWITTER_USER = 'meteodenny'
+TWITTER_USERNAME = 'meteodenny'
 FACEBOOK_LIKE = True
 TWITTER_TWEET_BUTTON = True
 TWITTER_LATEST_TWEETS = True
