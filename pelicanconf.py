@@ -12,18 +12,21 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
-THEME = '../theme4myblog'
+THEME = '../pelican-bootstrap3'
+PYGMENTS_STYLE = 'default'
+OVERWRITE_NB_HEADER = False
 
 TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = u'en'
 
 PLUGIN_PATHS = ['../pelican-plugins']
-PLUGINS = ['liquid_tags.notebook']
+PLUGINS = ['liquid_tags.notebook','tag_cloud','summary']
 
 NOTEBOOK_DIR = 'notebooks'
 
-DISPLAY_PAGES_ON_MENU = True
+DISPLAY_TAGS_ON_SIDEBAR = True
+SHOW_ARTICLE_CATEGORY = False
 DISPLAY_CATEGORIES_ON_MENU = False
 
 # Feed generation is usually not desired when developing
@@ -49,17 +52,15 @@ LINKS = (('EarthPy', 'http://earthpy.org/'),
          ('Eloquent Science', 'http://eloquentscience.com/'),
          )
 
-# Social widget
-#SOCIAL = (('You can add links in your config file', '#'),
-#          ('Another social link', '#'),)
-
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
 # Sharing
-TWITTER_WIDGET_ID = 3063887915
+DISQUS_SITENAME = 'disqus_5BMRcIJAsI'
+ADDTHIS_PROFILE = 'ra-55c2777d723325cf'
+TWITTER_WIDGET_ID = '572463710745427968'
 TWITTER_USER = 'meteodenny'
 TWITTER_USERNAME = 'meteodenny'
 GITHUB_URL = 'https://github.com/dennissergeev'

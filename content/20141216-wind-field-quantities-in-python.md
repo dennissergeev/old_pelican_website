@@ -4,7 +4,10 @@ date: 2014-12-16 16:26:20
 Tags: python, meteorology
 slug: wind-field-quantities-in-python
 
-_This post is merely sort of my own "lab notes", and I have to test the packages on a common simple example with known result. So I hope to rewrite it sooner or later._ Anyway, below are the links to some of the Python packages that have functions for calculating such wind field quantities as divergence and vorticity (curl, rotor). I am not yet sure what I'm going to use in my research, maybe it's better to write my own Python function. Or write it in Fortran and wrap it with f2py. Or simply use **Iris** package (see update below!). 
+_This post is merely sort of my own "lab notes", and I have to test the packages on a common simple example with known result. So I hope to rewrite it sooner or later._
+Anyway, below are the links to some of the Python packages that have functions for calculating such wind field quantities as divergence and vorticity (curl, rotor). I am not yet sure what I'm going to use in my research, maybe it's better to write my own Python function. Or write it in Fortran and wrap it with f2py. Or simply use **Iris** package (see update below!). 
+
+<!-- PELICAN_END_SUMMARY -->
 
 ## [Windspharm](http://ajdawson.github.io/windspharm/)
 
