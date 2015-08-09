@@ -1,5 +1,5 @@
-title: Polar lows trajectories as colored 2D lines on a map
+Title: Polar lows trajectories as colored 2D lines on a map
+date: 2015-03-02 22:59
 tags: python, dataviz, meteorology, polar lows
-date:  2015-03-02 11:30
 
-{% notebook Colored_PMC_Traj.ipynb cells[:] %}
+{% notebook 2015-03-02-pmc-trajectories.ipynb cells[2:] %}
