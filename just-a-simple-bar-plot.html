@@ -12,7 +12,7 @@
 <link rel="canonical" href="http://dennissergeev.github.io/just-a-simple-bar-plot.html">
 
         <meta name="author" content="Denis Sergeev" />
-        <meta name="keywords" content="python,dataviz" />
+        <meta name="keywords" content="python,dataviz,meteorology,polar lows" />
         <meta name="description" content="Couple of days ago I stumbled upon a table in one literature review ;-) and asked myself: &#34;How can these data be presented better?&#34;. So I sat and wrote a little Python code that produces a neat bar chart using powers of matplotlib and to some extent pandas. Think of this post as a cookbook page with a recipy assembled from a handful of Stack Overflow answers and matplotlib documentation." />
 
         <meta property="og:site_name" content="Meteodenny" />
@@ -24,6 +24,8 @@
             <meta property="article:section" content="misc" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="dataviz" />
+            <meta property="article:tag" content="meteorology" />
+            <meta property="article:tag" content="polar lows" />
             <meta property="article:author" content="Denis Sergeev" />
 
 
@@ -88,7 +90,7 @@ Meteodenny            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2015-08-06T00:00:00+01:00"> Thu 06 August 2015</time>
+        <i class="fa fa-calendar"></i><time datetime="2015-08-06T23:04:00+01:00"> Thu 06 August 2015</time>
     </span>
 
 
@@ -99,117 +101,125 @@ Meteodenny            </a>
 	<a href="http://dennissergeev.github.io/tag/python.html">python</a>
         /
 	<a href="http://dennissergeev.github.io/tag/dataviz.html">dataviz</a>
+        /
+	<a href="http://dennissergeev.github.io/tag/meteorology.html">meteorology</a>
+        /
+	<a href="http://dennissergeev.github.io/tag/polar-lows.html">polar lows</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Couple of days ago I stumbled upon a table in one literature review ;-) and asked myself: "How can these data be presented better?". So I sat and wrote a little Python code that produces a neat bar chart using powers of <code>matplotlib</code> and to some extent <code>pandas</code>. Think of this post as a cookbook page with a recipy assembled from a handful of Stack Overflow answers and <code>matplotlib</code> documentation.</p>
+                <p>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Couple of days ago I stumbled upon a table in one literature review ;-) and asked myself: "How can these data be presented better?". So I sat and wrote a little Python code that produces a neat bar chart using powers of <code>matplotlib</code> and to some extent <code>pandas</code>. Think of this post as a cookbook page with a recipy assembled from a handful of Stack Overflow answers and <code>matplotlib</code> documentation.</p>
 
 
 <p>Here is the original table, though written in Markdown, not in LaTeX.</p>
 <p>The data consists of estimates of ozone burden in Tg and its production in Tg per year with the corresponding references. The idea was to present the data on a single figure, hence I decided to plot a series of bar pairs. In other words, each study will correspond to a pair of bars, one plotted along one axis and the other - along another axis.</p>
 <table>
-<thead>
-<tr>
-<th align="center">Burden, Tg</th>
-<th align="center">Production, Tg yr–1</th>
-<th align="center">Reference</th>
+<thead><tr>
+<th style="text-align:center">Burden, Tg</th>
+<th style="text-align:center">Production, Tg yr–1</th>
+<th style="text-align:center">Reference</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Modelling Studies</td>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align:center">Modelling Studies</td>
 </tr>
 <tr>
-<td align="center">37+-23</td>
-<td align="center">4877+-853</td>
-<td align="center">Young et al. (2013)</td>
+<td style="text-align:center">37+-23</td>
+<td style="text-align:center">4877+-853</td>
+<td style="text-align:center">Young et al. (2013)</td>
 </tr>
 <tr>
-<td align="center">323</td>
-<td align="center">-</td>
-<td align="center">Archibald et al. (2011)</td>
+<td style="text-align:center">323</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">Archibald et al. (2011)</td>
 </tr>
 <tr>
-<td align="center">330</td>
-<td align="center">4876</td>
-<td align="center">Kawase et al. (2011)</td>
+<td style="text-align:center">330</td>
+<td style="text-align:center">4876</td>
+<td style="text-align:center">Kawase et al. (2011)</td>
 </tr>
 <tr>
-<td align="center">312</td>
-<td align="center">4289</td>
-<td align="center">Huijnen et al. (2010)</td>
+<td style="text-align:center">312</td>
+<td style="text-align:center">4289</td>
+<td style="text-align:center">Huijnen et al. (2010)</td>
 </tr>
 <tr>
-<td align="center">334</td>
-<td align="center">3826</td>
-<td align="center">Zeng et al. (2010)</td>
+<td style="text-align:center">334</td>
+<td style="text-align:center">3826</td>
+<td style="text-align:center">Zeng et al. (2010)</td>
 </tr>
 <tr>
-<td align="center">324</td>
-<td align="center">4870</td>
-<td align="center">Wild and Palmer (2008)</td>
+<td style="text-align:center">324</td>
+<td style="text-align:center">4870</td>
+<td style="text-align:center">Wild and Palmer (2008)</td>
 </tr>
 <tr>
-<td align="center">314</td>
-<td align="center">-</td>
-<td align="center">Zeng et al. (2008)</td>
+<td style="text-align:center">314</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">Zeng et al. (2008)</td>
 </tr>
 <tr>
-<td align="center">319</td>
-<td align="center">4487</td>
-<td align="center">Wu et al. (2007)</td>
+<td style="text-align:center">319</td>
+<td style="text-align:center">4487</td>
+<td style="text-align:center">Wu et al. (2007)</td>
 </tr>
 <tr>
-<td align="center">372</td>
-<td align="center">5042</td>
-<td align="center">Horowitz (2006)</td>
+<td style="text-align:center">372</td>
+<td style="text-align:center">5042</td>
+<td style="text-align:center">Horowitz (2006)</td>
 </tr>
 <tr>
-<td align="center">349</td>
-<td align="center">4384</td>
-<td align="center">Liao et al. (2006)</td>
+<td style="text-align:center">349</td>
+<td style="text-align:center">4384</td>
+<td style="text-align:center">Liao et al. (2006)</td>
 </tr>
 <tr>
-<td align="center">344+-39</td>
-<td align="center">5110+-606</td>
-<td align="center">Stevenson et al. (2006)</td>
+<td style="text-align:center">344+-39</td>
+<td style="text-align:center">5110+-606</td>
+<td style="text-align:center">Stevenson et al. (2006)</td>
 </tr>
 <tr>
-<td align="center">314+-33</td>
-<td align="center">4465+-514</td>
-<td align="center">Wild (2007)</td>
+<td style="text-align:center">314+-33</td>
+<td style="text-align:center">4465+-514</td>
+<td style="text-align:center">Wild (2007)</td>
 </tr>
 <tr>
-<td align="center">Observational Studies</td>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align:center">Observational Studies</td>
 </tr>
 <tr>
-<td align="center">333</td>
-<td align="center">-</td>
-<td align="center">Fortuin and Kelder (1998)</td>
+<td style="text-align:center">333</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">Fortuin and Kelder (1998)</td>
 </tr>
 <tr>
-<td align="center">327</td>
-<td align="center">-</td>
-<td align="center">Logan (1999)</td>
+<td style="text-align:center">327</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">Logan (1999)</td>
 </tr>
 <tr>
-<td align="center">325</td>
-<td align="center">-</td>
-<td align="center">Ziemke et al. (2011)</td>
+<td style="text-align:center">325</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">Ziemke et al. (2011)</td>
 </tr>
 <tr>
-<td align="center">319–351</td>
-<td align="center">-</td>
-<td align="center">Osterman et al. (2008)</td>
+<td style="text-align:center">319–351</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">Osterman et al. (2008)</td>
 </tr>
 </tbody>
 </table>
 <p>It can be seen that the table is not very expressive in presenting data. Let's try to convert it to a diagram that hopefully will be more eloquent.</p>
-<p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -221,7 +231,7 @@ Meteodenny            </a>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -234,7 +244,7 @@ Meteodenny            </a>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">matplotlib</span>
@@ -251,7 +261,7 @@ Meteodenny            </a>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">matplotlib</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s">&#39;ggplot&#39;</span><span class="p">)</span> <span class="c"># make the plot style prettier</span>
@@ -306,7 +316,7 @@ The next line is an example line of the file. Note that the last element denotes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&#39;../data/o3_budget_studies.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">([</span><span class="s">&#39;Year&#39;</span><span class="p">])</span>
@@ -319,7 +329,7 @@ The next line is an example line of the file. Note that the last element denotes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span>
@@ -333,7 +343,7 @@ The next line is an example line of the file. Note that the last element denotes
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -543,7 +553,7 @@ The next line is an example line of the file. Note that the last element denotes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Convert hex colors to RGB colors used by matplotlib</span>
@@ -572,7 +582,7 @@ The next line is an example line of the file. Note that the last element denotes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">inds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="c"># length of the dataframe</span>
@@ -585,7 +595,7 @@ The next line is an example line of the file. Note that the last element denotes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Blueish colors for modelling, otherwise - orange</span>
@@ -610,7 +620,7 @@ The next line is an example line of the file. Note that the last element denotes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">ylabs</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="s">&#39; ({})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Authors&#39;</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Year&#39;</span><span class="p">])]</span>
@@ -633,7 +643,7 @@ The next line is an example line of the file. Note that the last element denotes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -2127,6 +2137,39 @@ lIiKiIiIiIiITSkRFREREREREZv6/wyNHuu75jm6AAAAAElFTkSuQmCC
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">HTML</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+    <small>
+    <p> This post was written as an IPython notebook. You can view it as a static 
+    <a href="http://nbviewer.ipython.org/github/dennissergeev/dennissergeev.github.io/blob/src/content/notebooks/2015-08-06-table-to-barplot.ipynb">HTML file</a> or 
+    <a href="http://github.com/dennissergeev/dennissergeev.github.io/tree/src/content/notebooks/2015-08-06-table-to-barplot.ipynb">download the source</a>.</p>
+    
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></p>
             </div>
             <!-- /.entry-content -->
@@ -2188,23 +2231,23 @@ lIiKiIiIiIiITSkRFREREREREZv6/wyNHuu75jm6AAAAAElFTkSuQmCC
                         </a>
                     </li>
                     <li class="list-group-item tag-1">
-                        <a href="http://dennissergeev.github.io/tag/meteorology.html">
-                            meteorology
+                        <a href="http://dennissergeev.github.io/tag/python.html">
+                            python
                         </a>
                     </li>
                     <li class="list-group-item tag-1">
-                        <a href="http://dennissergeev.github.io/tag/python.html">
-                            python
+                        <a href="http://dennissergeev.github.io/tag/polar-lows.html">
+                            polar lows
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="http://dennissergeev.github.io/tag/meteorology.html">
+                            meteorology
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
                         <a href="http://dennissergeev.github.io/tag/atmospheric-science.html">
                             atmospheric science
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-2">
-                        <a href="http://dennissergeev.github.io/tag/polar-lows.html">
-                            polar lows
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
