@@ -30,7 +30,7 @@ def connect_notebook_to_post(name='Untitled', title='New post', tags='ipython'):
     <small>
     <p> This post was written as an IPython notebook. You can view it as a static 
     <a href="http://nbviewer.ipython.org/github/dennissergeev/dennissergeev.github.io/blob/src/content/notebooks/%s.ipynb">HTML file</a> or 
-    <a href="http://github.com/dennissergeev/dennissergeev.github.io/tree/src/content/notebooks/%s.ipynb">download the source</a>.</p>
+    <a href="https://raw.githubusercontent.com/dennissergeev/dennissergeev.github.io/src/content/notebooks/%s.ipynb">download the source</a>.</p>
     """ % (name, name)
 
     return html
