@@ -11,9 +11,9 @@ Here is a list of tools that I use in my research
 * [Vim](http://www.vim.org/)
 
 #### Word processing and presentations
-* LaTeX: [Texmaker](http://xm1math.net/texmaker/) and [Authorea](http://authorea.com/)
-* LibreOffice Writer
-* Microsoft PowerPoint
+* Local PC: [Texmaker](http://xm1math.net/texmaker/)
+* Online: [Overleaf](http://overleaf.com), [Authorea](http://authorea.com/)
+* Moving from PowerPoint to reveal.js
 
 #### Vector graphics and poster preparation
 * [LaTeX](http://latextemplates.com/cat/conference-posters)
@@ -23,7 +23,7 @@ Here is a list of tools that I use in my research
 * [Mendeley](http://mendeley.com/dashboard/)
 
 #### Scientific data analysis and visualisation 
-All listed below are Python libraries, by the way.
+All listed below are Python libraries
 ##### Data IO
 * Earth sciences data formats: [netcdf4](http://unidata.github.io/netcdf4-python/), [h5py](http://docs.h5py.org/en/latest/), [xray](http://xray.readthedocs.org/en/stable/), [iris](http://scitools.org.uk/iris/index.html)
 * Tabular data: [pandas](http://pandas.pydata.org/)
@@ -42,7 +42,6 @@ All listed below are Python libraries, by the way.
 
 #### Python management
 * [Anaconda](http://store.continuum.io/cshop/anaconda/), particularly this Binstar channel: [SciTools](http://binstar.org/scitools)
-* and to a lesser extent, [Enthought Canopy](http://enthought.com/products/canopy/)
 
 #### Version control
 * Software: [Git](http://git-scm.com/)
