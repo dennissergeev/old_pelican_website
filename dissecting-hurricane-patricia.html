@@ -95,7 +95,7 @@ Meteodenny            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2015-11-15T18:24:00+00:00"> Sun 15 November 2015</time>
+        <i class="fa fa-calendar"></i><time datetime="2015-11-15T22:07:00+00:00"> Sun 15 November 2015</time>
     </span>
 
 
@@ -157,7 +157,7 @@ Meteodenny            </a>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Recently I used CloudSat data to investigate a polar low cloud structure. Having some code available, I decided to have a look at Patricia too. After waiting for about 12 days for the data being made available I checked if there were any overpasses close to Patricia when it reached maximum intensity. Luckily, the satellite flew over the western coast of Mexico on 23 October at around 20:35 - just before the landfall. It was a bit too late though too capture the crescendo of the storm life cycle.</p>
+<p>Recently I used CloudSat data to investigate a polar low cloud structure. Having some code available, I decided to have a look at Patricia too. After waiting for about 12 days for the data being made available I checked if there were any overpasses close to Patricia when it reached maximum intensity. Luckily, the satellite flew over the western coast of Mexico on 23 October at around 20:35 - just before the landfall. It was a bit too late though to capture the crescendo of the storm life cycle.</p>
 
 </div>
 </div>
@@ -379,45 +379,9 @@ Meteodenny            </a>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I can retrieve the files simply by using <code>urllib</code> Python library.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">modis_l1b_url</span><span class="p">)):</span>
-    <span class="n">urllib</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">modis_l1b_url</span><span class="p">)</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">modis_geo_url</span><span class="p">)):</span>
-    <span class="n">urllib</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">modis_geo_url</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The base names of the files are the following:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">modis_l1b_fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">modis_l1b_url</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">&#39;.h5&#39;</span>
@@ -435,6 +399,44 @@ Meteodenny            </a>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Note that I change the file extension to HDF-5, because I convert the original HDF-4 files using <a href="https://www.hdfgroup.org/h4toh5/"><code>h4toh5</code> tool</a>. It's not necessary, but I find h5py library more convenient to use.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I can retrieve the original files by using <code>urllib</code> Python library.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">modis_l1b_url</span><span class="p">))</span> \
+   <span class="ow">and</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">modis_l1b_fname</span><span class="p">)):</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">modis_l1b_url</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">modis_geo_url</span><span class="p">))</span> \
+   <span class="ow">and</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">modis_geo_fname</span><span class="p">)):</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">modis_geo_url</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The base names of the files are the following:</p>
 
 </div>
 </div>
@@ -741,7 +743,7 @@ Meteodenny            </a>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I'm not going to convert the radiance data to the brightness temperature of cloud tops, so now I'm ready to put the image on a map. I use <code>cartopy</code> module and a useful function <code>make_map</code> from <a href="http://ocefpaf.github.io/python4oceanographers/">python4oceanographers blog</a></p>
+<p>I'm not going to convert the radiance data to the brightness temperature of cloud tops, so now I'm ready to put the image on a map. I use <code>cartopy</code> module and a useful function <code>make_map</code> from <a href="http://ocefpaf.github.io/python4oceanographers/">python4oceanographers blog</a>.</p>
 
 </div>
 </div>
@@ -6299,7 +6301,7 @@ YGBgYGBgYHDPMGTSwMDAwMDAwMDgnvH/AZySW6YEylZRAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The eye of the storm is barely distinguishable at $105^\circ W$, but it can be seen that CloudSat's orbit path goes 1-2 degrees to the west of the cyclone axis.</p>
+<p>The eye of the storm is barely distinguishable at 105W, but it can be seen that CloudSat's orbit path goes 1-2 degrees to the west of it.</p>
 
 </div>
 </div>
@@ -6318,7 +6320,7 @@ YGBgYGBgYHDPMGTSwMDAwMDAwMDgnvH/AZySW6YEylZRAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I've been keeping the most interesting part for dessert. Now I'm going to plot a simple subset of CloudSat radar reflectivity data that is effectively a cross-section of cloud particles along the orbit path shown on the map above.</p>
+<p>I've been keeping the most interesting part for dessert. Now I'm going to plot a subset of CloudSat radar reflectivity data that is effectively a cross-section of cloud particles along the orbit path shown on the map above.</p>
 
 </div>
 </div>
@@ -6342,7 +6344,7 @@ YGBgYGBgYHDPMGTSwMDAwMDAwMDgnvH/AZySW6YEylZRAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It's necessary to mention that this part is based by the <a href="http://ccplot.org/"><code>ccplot</code></a> - an open-source CloudSat and CALIPSO plotting tool written in Python. The <code>ccplot</code> functions that are in my <code>ccsat_tools.py</code> script and are almost unchanged are:</p>
+<p>It's necessary to mention that this part is based on the <a href="http://ccplot.org/"><code>ccplot</code></a> - an open-source CloudSat and CALIPSO plotting tool written in Python. The <code>ccplot</code> functions that are in my <code>ccsat_tools.py</code> script and are almost unchanged are:</p>
 <ul>
 <li><code>cc_interp2d</code> (wrapped with <code>numba.jit()</code> instead of <code>cython</code> for fast interpolation)</li>
 <li><code>get_cc_cmap</code> (to get the original <code>ccplot</code> colormaps for radar reflectivity)</li>
@@ -6395,7 +6397,7 @@ YGBgYGBgYHDPMGTSwMDAwMDAwMDgnvH/AZySW6YEylZRAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7fc9ea3ad0d0&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f9538e15110&gt;</pre>
 </div>
 
 </div>
@@ -9157,13 +9159,13 @@ rK3+C3cEB4kpPgcVAAAAAElFTkSuQmCC
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://dennissergeev.github.io/tag/atmospheric-science.html">
-                            atmospheric science
+                        <a href="http://dennissergeev.github.io/tag/polar-lows.html">
+                            polar lows
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://dennissergeev.github.io/tag/polar-lows.html">
-                            polar lows
+                        <a href="http://dennissergeev.github.io/tag/atmospheric-science.html">
+                            atmospheric science
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
