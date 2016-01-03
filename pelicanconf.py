@@ -7,7 +7,7 @@ SITENAME = u'Meteodenny'
 SITEURL = ''
 
 PATH = 'content'
-STATIC_PATHS = ['pdfs', 'extra/favicon.ico', 'extra/custom.css']
+STATIC_PATHS = ['pdfs', 'extra', 'extra/favicon.ico', 'extra/custom.css']
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/custom.css': {'path': 'extra/custom.css'}
