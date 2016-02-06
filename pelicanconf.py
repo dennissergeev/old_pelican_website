@@ -18,6 +18,7 @@ BOOTSTRAP_THEME = 'flatly'
 PYGMENTS_STYLE = 'default'
 OVERWRITE_NB_HEADER = False
 CUSTOM_CSS = 'extra/custom.css'
+#EXTRA_HEADER = open('_nb_header.html').read() # Python2: .decode('utf-8')
 
 TIMEZONE = 'Europe/London'
 
