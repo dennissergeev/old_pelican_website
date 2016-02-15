@@ -7,14 +7,18 @@ SITENAME = u'Meteodenny'
 SITEURL = ''
 
 PATH = 'content'
-STATIC_PATHS = ['pdfs', 'extra/favicon.ico', 'extra']
+STATIC_PATHS = ['pdfs', 'extra', 'extra/favicon.ico', 'extra/custom.css']
 EXTRA_PATH_METADATA = {
-    'extra/favicon.ico': {'path': 'favicon.ico'}
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/custom.css': {'path': 'extra/custom.css'}
 }
 
-THEME = '../pelican-bootstrap3'
+THEME = '../modified-bootstrap3'
+BOOTSTRAP_THEME = 'flatly'
 PYGMENTS_STYLE = 'default'
-OVERWRITE_NB_HEADER = False
+CUSTOM_CSS = 'extra/custom.css'
+OVERWRITE_NB_HEADER = True
+EXTRA_HEADER = open('_nb_header.html').read()
 
 TIMEZONE = 'Europe/London'
 
