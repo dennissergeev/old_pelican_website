@@ -23,7 +23,6 @@ Here is a list of tools that I use in my research
 * [Mendeley](http://mendeley.com/dashboard/)
 
 #### Scientific data analysis and visualisation 
-All listed below are Python libraries
 ##### Data IO
 * Earth sciences data formats: [netcdf4](http://unidata.github.io/netcdf4-python/), [h5py](http://docs.h5py.org/en/latest/), [xray](http://xray.readthedocs.org/en/stable/), [iris](http://scitools.org.uk/iris/index.html)
 * Tabular data: [pandas](http://pandas.pydata.org/)
@@ -34,14 +33,13 @@ All listed below are Python libraries
 * Generic: [matplotlib](http://matplotlib.org/)
 * Geospatial data: [basemap](http://matplotlib.org/basemap/), [cartopy](http://scitools.org.uk/cartopy/index.html)
 * Skew-T diagrams and tephigrams: [skewt](http://pypi.python.org/pypi/SkewT), [tephi](http://tephi.readthedocs.org/en/latest/index.html)
-* Graphs: trying to use [seaborn](http://stanford.edu/~mwaskom/software/seaborn/)
 * 3D visualisation: [Mayavi](http://docs.enthought.com/mayavi/mayavi/), [Paraview](http://paraview.org/python/), [VAPOR](http://www.vapor.ucar.edu) (with Python interface)
 
 #### Python code development
 * [Jupyter Notebook](http://jupyter.org/)
 
 #### Python management
-* [Anaconda](http://store.continuum.io/cshop/anaconda/), particularly this Binstar channel: [SciTools](http://binstar.org/scitools)
+* [Anaconda](http://store.continuum.io/cshop/anaconda/), particularly [SciTools](http://binstar.org/scitools) channel
 
 #### Version control
 * Software: [Git](http://git-scm.com/)
