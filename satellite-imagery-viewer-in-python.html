@@ -700,7 +700,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">matplotlib</span> inline
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 
 </div>
@@ -713,7 +713,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="n">Image</span><span class="p">(</span><span class="s1">&#39;../figures/satviewpy_screenshot.png&#39;</span><span class="p">,</span> <span class="n">retina</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
@@ -9557,7 +9557,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lon1</span><span class="o">=-</span><span class="mf">180.</span><span class="p">,</span><span class="n">lon2</span><span class="o">=</span><span class="mf">180.</span><span class="p">,</span><span class="n">lat1</span><span class="o">=-</span><span class="mf">90.</span><span class="p">,</span><span class="n">lat2</span><span class="o">=</span><span class="mf">90.</span><span class="p">,</span><span class="n">proj</span><span class="o">=</span><span class="s1">&#39;mill&#39;</span><span class="p">,</span><span class="n">tick_incr</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lon1</span><span class="o">=-</span><span class="mf">180.</span><span class="p">,</span><span class="n">lon2</span><span class="o">=</span><span class="mf">180.</span><span class="p">,</span><span class="n">lat1</span><span class="o">=-</span><span class="mf">90.</span><span class="p">,</span><span class="n">lat2</span><span class="o">=</span><span class="mf">90.</span><span class="p">,</span><span class="n">proj</span><span class="o">=</span><span class="s1">&#39;mill&#39;</span><span class="p">,</span><span class="n">tick_incr</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span> <span class="c1"># Create a figure</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span> <span class="c1"># Define axes</span>
 
@@ -9603,7 +9603,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">print</span> <span class="s1">&#39;Reading: &#39;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">file_names</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">ind</span><span class="p">]</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">get_time_str</span><span class="p">()</span> <span class="c1"># Explained later</span>
     <span class="c1"># Open a GeoTIFF image with &#39;ind&#39; index in the file names list</span>
@@ -9650,7 +9650,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">get_time_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_time_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="c1"># Get file name from the path and parse it assuming &#39;.&#39; is a delimiter</span>
     <span class="n">cur_file_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_names</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">ind</span><span class="p">])</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">channel</span> <span class="o">=</span> <span class="n">cur_file_name</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -9680,7 +9680,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">plot_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">plot_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="c1"># Convert longitudes and latitudes of the image to the coordinates of a set up projection</span>
     <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lons</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">lats</span><span class="p">)</span>
     <span class="c1"># Show the image in standard gray colour map.</span>
@@ -9711,7 +9711,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">on_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">on_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">inaxes</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="p">:</span> <span class="c1"># Check if mouse is clicked inside the plot axes</span>
         <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">button</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># Left button</span>
             <span class="c1"># Convert (x, y) to (lon, lat) using Basemap</span>
@@ -9771,7 +9771,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">write_xy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">write_xy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">outf</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">out_file_name</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
     <span class="n">outf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ind</span><span class="p">)</span><span class="o">+</span>\
     <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">time_raw</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="o">+</span><span class="s1">&#39;{0:.3f}</span><span class="se">\t</span><span class="s1">{1:.3f}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lonlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">latlist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
@@ -9798,7 +9798,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;../data/pmc_loc_time_ch4_20Mar-02Apr.txt&#39;</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -9846,7 +9846,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">datetime</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">import</span> <span class="nn">glob</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">matplotlib.widgets</span> <span class="kn">import</span> <span class="n">Cursor</span>
@@ -9866,7 +9866,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">datadir_sat</span> <span class="o">=</span> <span class="s1">&#39;./satellite/GeoTIFF/&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">datadir_sat</span> <span class="o">=</span> <span class="s1">&#39;./satellite/GeoTIFF/&#39;</span>
 <span class="n">file_name_sat</span> <span class="o">=</span> <span class="p">[]</span> 
 <span class="n">file_name_sat</span> <span class="o">+=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">datadir_sat</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span> <span class="o">+</span> <span class="s1">&#39;*.tif&#39;</span><span class="p">)</span>
 <span class="n">file_name_sat</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># Sort list of file names</span>
@@ -9888,7 +9888,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">class</span> <span class="nc">SatView</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">SatView</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">file_names</span><span class="p">,</span><span class="n">out_file_name</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file_names</span> <span class="o">=</span> <span class="n">file_names</span>
         <span class="k">if</span> <span class="n">out_file_name</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
@@ -10029,7 +10029,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#</span>
 <span class="c1"># And now the actual call of the object</span>
 <span class="c1">#</span>
 <span class="n">SatView</span><span class="p">(</span><span class="n">file_name_sat</span><span class="p">)(</span><span class="n">lon_min</span><span class="p">,</span><span class="n">lon_max</span><span class="p">,</span><span class="n">lat_min</span><span class="p">,</span><span class="n">lat_max</span><span class="p">)</span>
@@ -10055,7 +10055,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">HTML</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -10137,13 +10137,13 @@ height=311
             <li class="list-group-item"><a href="http://dennissergeev.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group " id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="http://dennissergeev.github.io/tag/meteorology.html">
-                            meteorology
+                        <a href="http://dennissergeev.github.io/tag/python.html">
+                            python
                         </a>
                     </li>
                     <li class="list-group-item tag-1">
-                        <a href="http://dennissergeev.github.io/tag/python.html">
-                            python
+                        <a href="http://dennissergeev.github.io/tag/meteorology.html">
+                            meteorology
                         </a>
                     </li>
                     <li class="list-group-item tag-2">

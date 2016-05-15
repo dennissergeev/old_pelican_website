@@ -740,7 +740,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
@@ -767,7 +767,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">flux_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/flux_data.txt&#39;</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">flux_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/flux_data.txt&#39;</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -790,7 +790,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">values_and_names</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">values_and_names</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([</span>
 <span class="p">(</span><span class="s1">&#39;time         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">1</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Time&#39;</span><span class="p">)),</span>
 <span class="p">(</span><span class="s1">&#39;BXXX         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">2</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Mission identifier&#39;</span><span class="p">)),</span>
 <span class="p">(</span><span class="s1">&#39;lat          &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">3</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Latitude (deg)&#39;</span><span class="p">)),</span>
@@ -892,7 +892,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">values_and_names</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">((</span><span class="n">k</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values_and_names</span><span class="o">.</span><span class="n">viewitems</span><span class="p">())</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">values_and_names</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">((</span><span class="n">k</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values_and_names</span><span class="o">.</span><span class="n">viewitems</span><span class="p">())</span>
 </pre></div>
 
 </div>
@@ -915,7 +915,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">values_and_names</span><span class="p">:</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">values_and_names</span><span class="p">:</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">values_and_names</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span>
     <span class="n">ibeg</span> <span class="o">=</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;)&quot;</span><span class="p">)</span>
     <span class="n">ibeg</span> <span class="o">=</span> <span class="n">ibeg</span><span class="o">+</span><span class="mi">1</span> <span class="k">if</span> <span class="n">ibeg</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
@@ -947,7 +947,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">variables</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">variables</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">values_and_names</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="s1">&#39;time&#39;</span><span class="p">:</span>
         <span class="n">variables</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> 
@@ -975,7 +975,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">ds</span> <span class="o">=</span> <span class="n">xray</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">variables</span><span class="o">=</span><span class="n">variables</span><span class="p">,</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xray</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">variables</span><span class="o">=</span><span class="n">variables</span><span class="p">,</span>
              <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">values_and_names</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">])})</span>
 </pre></div>
 
@@ -999,7 +999,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">ds</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;flux_data.nc&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;flux_data.nc&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1023,7 +1023,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">HTML</span><span class="p">(</span><span class="n">html_foot</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="n">html_foot</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1105,13 +1105,13 @@ Meteodenny            </a>
             <li class="list-group-item"><a href="http://dennissergeev.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group " id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="http://dennissergeev.github.io/tag/meteorology.html">
-                            meteorology
+                        <a href="http://dennissergeev.github.io/tag/python.html">
+                            python
                         </a>
                     </li>
                     <li class="list-group-item tag-1">
-                        <a href="http://dennissergeev.github.io/tag/python.html">
-                            python
+                        <a href="http://dennissergeev.github.io/tag/meteorology.html">
+                            meteorology
                         </a>
                     </li>
                     <li class="list-group-item tag-2">

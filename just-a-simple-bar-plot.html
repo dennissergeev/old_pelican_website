@@ -799,7 +799,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">matplotlib</span> inline
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 
 </div>
@@ -812,7 +812,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">matplotlib</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
 <span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="kn">as</span> <span class="nn">mcol</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -829,7 +829,7 @@ Meteodenny            </a>
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">matplotlib</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span> <span class="c1"># make the plot style prettier</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">matplotlib</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span> <span class="c1"># make the plot style prettier</span>
 <span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.default&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;regular&#39;</span> <span class="c1"># make LaTeX expressions not italised</span>
 <span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Arial&#39;</span>
 </pre></div>
@@ -884,7 +884,7 @@ The next line is an example line of the file. Note that the last element denotes
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/o3_budget_studies.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">([</span><span class="s1">&#39;Year&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/o3_budget_studies.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">([</span><span class="s1">&#39;Year&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -897,7 +897,7 @@ The next line is an example line of the file. Note that the last element denotes
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">df</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span>
 </pre></div>
 
 </div>
@@ -1121,7 +1121,7 @@ The next line is an example line of the file. Note that the last element denotes
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Convert hex colors to RGB colors used by matplotlib</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Convert hex colors to RGB colors used by matplotlib</span>
 <span class="n">clr1</span> <span class="o">=</span> <span class="p">[</span><span class="n">mcol</span><span class="o">.</span><span class="n">hex2color</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;#348ABD&#39;</span><span class="p">,</span> <span class="s1">&#39;#FF9933&#39;</span><span class="p">]]</span>
 <span class="n">clr2</span> <span class="o">=</span> <span class="p">[</span><span class="n">mcol</span><span class="o">.</span><span class="n">hex2color</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;#15374C&#39;</span><span class="p">,</span> <span class="s1">&#39;#B26B24&#39;</span><span class="p">]]</span>
 <span class="n">width</span> <span class="o">=</span> <span class="mf">0.35</span> <span class="c1"># width of the bars</span>
@@ -1150,7 +1150,7 @@ The next line is an example line of the file. Note that the last element denotes
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">inds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="c1"># length of the dataframe</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">inds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="c1"># length of the dataframe</span>
 </pre></div>
 
 </div>
@@ -1163,7 +1163,7 @@ The next line is an example line of the file. Note that the last element denotes
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Blueish colors for modelling, otherwise - orange</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Blueish colors for modelling, otherwise - orange</span>
 <span class="n">barcolors1</span> <span class="o">=</span> <span class="p">[</span><span class="n">clr1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;mod&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">else</span> <span class="n">clr1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">inds</span><span class="p">]</span>
 <span class="n">barcolors2</span> <span class="o">=</span> <span class="p">[</span><span class="n">clr2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;mod&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">else</span> <span class="n">clr2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">inds</span><span class="p">]</span>
 </pre></div>
@@ -1188,7 +1188,7 @@ The next line is an example line of the file. Note that the last element denotes
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">ylabs</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="s1">&#39; ({})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Authors&#39;</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">])]</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ylabs</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="s1">&#39; ({})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Authors&#39;</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">])]</span>
 </pre></div>
 
 </div>
@@ -1211,7 +1211,7 @@ The next line is an example line of the file. Note that the last element denotes
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
 <span class="n">brdn</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">inds</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Burden&#39;</span><span class="p">],</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">barcolors1</span><span class="p">,</span> 
               <span class="n">xerr</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Burden_error&#39;</span><span class="p">],</span> <span class="n">error_kw</span><span class="o">=</span><span class="n">error_kw1</span><span class="p">)</span>
@@ -2708,7 +2708,7 @@ lIiKiIiIiIiITSkRFREREREREZv6/wyNHuu75jm6AAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">HTML</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2790,13 +2790,13 @@ lIiKiIiIiIiITSkRFREREREREZv6/wyNHuu75jm6AAAAAElFTkSuQmCC
             <li class="list-group-item"><a href="http://dennissergeev.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group " id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="http://dennissergeev.github.io/tag/meteorology.html">
-                            meteorology
+                        <a href="http://dennissergeev.github.io/tag/python.html">
+                            python
                         </a>
                     </li>
                     <li class="list-group-item tag-1">
-                        <a href="http://dennissergeev.github.io/tag/python.html">
-                            python
+                        <a href="http://dennissergeev.github.io/tag/meteorology.html">
+                            meteorology
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
