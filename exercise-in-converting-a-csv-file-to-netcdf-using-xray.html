@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Categories - Meteodenny</title>
+    <title>Exercise in converting a CSV file to NetCDF using xray - Meteodenny</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -23721,15 +23721,22 @@ jQuery(document).ready(function($) {
 
 
 
+<link rel="canonical" href="http://dennissergeev.github.io/exercise-in-converting-a-csv-file-to-netcdf-using-xray.html">
 
         <meta name="author" content="Denis Sergeev" />
+        <meta name="keywords" content="python,data formats" />
+        <meta name="description" content="The story begins with a text file that I got from supervisor. That file contained many lines (time dimension) and many columns (variables) of numeric data that were the result of postprocessing of ACCACIA aircraft measurements. The file itself didn&#39;t contain any metadata, but it came with a matlab ..." />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="Meteodenny" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Meteodenny"/>
-        <meta property="og:url" content="http://dennissergeev.github.io"/>
-        <meta property="og:description" content="Meteodenny"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Exercise in converting a CSV file to NetCDF using xray"/>
+        <meta property="og:url" content="http://dennissergeev.github.io/exercise-in-converting-a-csv-file-to-netcdf-using-xray.html"/>
+        <meta property="og:description" content="The story begins with a text file that I got from supervisor. That file contained many lines (time dimension) and many columns (variables) of numeric data that were the result of postprocessing of ACCACIA aircraft measurements. The file itself didn&#39;t contain any metadata, but it came with a matlab ..."/>
+        <meta property="article:published_time" content="2015-09-08" />
+            <meta property="article:section" content="misc" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="data formats" />
+            <meta property="article:author" content="Denis Sergeev" />
 
 
     <!-- Bootstrap -->
@@ -23783,33 +23790,463 @@ Meteodenny            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-    <section id="categories">
-        <h1>All Categories for Meteodenny</h1>
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-misc">misc <span class="badge pull-right">10</span></a>
-                    </h4>
-                </div>
-                <div id="collapse-misc" class="panel-collapse collapse">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://dennissergeev.github.io/exercise-in-converting-a-csv-file-to-netcdf-using-xray.html"
+                       rel="bookmark"
+                       title="Permalink to Exercise in converting a CSV file to NetCDF using xray">
+                        Exercise in converting a CSV file to NetCDF using xray
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
                     <div class="panel-body">
-                        <p><span class="categories-timestamp"><time datetime="2016-02-25T23:31:00+00:00">Thu 25 February 2016</time></span> <a href="http://dennissergeev.github.io/ultimate-exception-handler.html">Ultimate exception handler</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2015-11-15T22:07:00+00:00">Sun 15 November 2015</time></span> <a href="http://dennissergeev.github.io/dissecting-hurricane-patricia.html">Dissecting Hurricane Patricia</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2015-09-08T20:06:00+01:00">Tue 08 September 2015</time></span> <a href="http://dennissergeev.github.io/exercise-in-converting-a-csv-file-to-netcdf-using-xray.html">Exercise in converting a CSV file to NetCDF using xray</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2015-08-06T21:42:00+01:00">Thu 06 August 2015</time></span> <a href="http://dennissergeev.github.io/just-a-simple-bar-plot.html">Just a simple bar plot</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2015-06-08T00:00:00+01:00">Mon 08 June 2015</time></span> <a href="http://dennissergeev.github.io/to-the-question-of-using-a-simplified-model-in-dynamic-meteorology.html">To the question of using a simplified model in dynamic meteorology</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2015-03-02T21:41:00+00:00">Mon 02 March 2015</time></span> <a href="http://dennissergeev.github.io/polar-lows-trajectories-as-colored-2d-lines-on-a-map.html">Polar lows trajectories as colored 2D lines on a map</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2015-01-22T21:40:00+00:00">Thu 22 January 2015</time></span> <a href="http://dennissergeev.github.io/satellite-imagery-viewer-in-python.html">Satellite imagery viewer in Python</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2014-12-16T16:26:20+00:00">Tue 16 December 2014</time></span> <a href="http://dennissergeev.github.io/wind-field-quantities-in-python.html">Python packages to calculate wind field quantities</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2014-12-14T00:00:00+00:00">Sun 14 December 2014</time></span> <a href="http://dennissergeev.github.io/a-nice-quote-from-nature.html">A nice quote from Nature</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2014-07-16T00:00:00+01:00">Wed 16 July 2014</time></span> <a href="http://dennissergeev.github.io/bloggers-creed.html">Blogger's creed</a></p>
-                    </div>
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-09-08T20:06:00+01:00"> Tue 08 September 2015</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://dennissergeev.github.io/tag/python.html">python</a>
+        /
+	<a href="http://dennissergeev.github.io/tag/data-formats.html">data formats</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
+                <p>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The story begins with a text file that I got from supervisor. That file contained many lines (time dimension) and many columns (variables) of numeric data that were the result of postprocessing of <a href="http://arcticaccacia.wordpress.com/">ACCACIA</a> aircraft measurements. The file itself didn't contain any metadata, but it came with a matlab script, which loads the data and has comments to each column, e.g.:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>...</code></p>
+<p><code>flux_data = load(file_name);</code></p>
+<p><code>...</code></p>
+<p><code>pressure    = flux_data(:,11);      % Air pressure (hPa)</code></p>
+<p><code>wind_speed  = flux_data(:,12);      % Horisontal wind speed (m s-1)</code></p>
+<p><code>wind_dir    = flux_data(:,13);      % Wind direction (deg)</code></p>
+<p><code>...</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Converting this script to Python was pretty trivial, and I had used this interface for some tim. It was already more convenient to use than the original matlab: once the script was imported, all the variables could be accessed as its keys:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>import read_flux_data as flx</code></p>
+<p><code>print(flx.wind_speed) # 1D array of wind speed values</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But then I got tired of only the values being accessible, but not the description and units that resided in the comments inside the script. The obvious way to was to convert two files: data and reading script into a NetCDF file. Plus, the <code>xray</code> package had been gaining popularity. So below is my little exercise in data I/O using the modern NetCDF handler.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To begin with, I load necessary modules</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">xray</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Instead of <code>numpy.genfromtxt()</code> as my original Python script did I use a <code>pandas</code> function to read the .csv file. TIL the <code>read_csv</code> function has an awesome feature to parse date-time strings automatically...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">flux_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/flux_data.txt&#39;</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then, being a lazy bastard I am, I just copied the contents of my Python script and literally wrapped them with necessary syntax to divide data input and the comments, organising all this in an <code>OrderedDict</code> of dictionaries. Useful thing is this dictionary class...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">values_and_names</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([</span>
+<span class="p">(</span><span class="s1">&#39;time         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">1</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Time&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;BXXX         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">2</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Mission identifier&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;lat          &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">3</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Latitude (deg)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;lon          &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">4</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Longitude (deg)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;flag         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">5</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;1: sea, 2: MIZ/ice&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;dist         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">6</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Length of run (km)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;altitude     &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">7</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Radar altitude (m)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;altitude_std &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">8</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Stdev radar altitude (m)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;heading      &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">9</span> <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Heading (deg)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;pressure     &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Air pressure (hPa)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;wind_speed   &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Horisontal wind speed (m s-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;wind_dir     &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Wind direction (deg)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;vert_wind    &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Vertical wind velocity (m s-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;temp         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Air temperature (K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;temp_dew     &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Dew point (K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;q            &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Air specific humidity (g/kg)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;theta        &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Pot. temp., 1.order approximation: theta = T+gamma.z  (K)  &#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;theta_v      &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Virtual pot. temperature (K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;rho          &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Density (kg m-3)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;mslp         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Mean sea level pressure&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;temp_sfc     &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Surface temperature (Upwell. brightn. temp.) (K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;q_sfc        &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">22</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Surface air specific humidity (g kg-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;sw_up        &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Short wave upward (W m-2) &#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;sw_down      &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">24</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Short wave downward (W m-2)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;lw_up        &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">25</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Long wave upward (W m-2) &#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;lw_down      &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">26</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Long wave downward (W m-2) &#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;u_10m        &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">27</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Wind speed adjusted to 10 m (m s-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;t_2m         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">28</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Temperature adjusted to 2 m (K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;q_2m         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">29</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Specific humidity adjusted to 2 m (g kg-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;rh_2m        &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">30</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Relative humidity at 2 m (%)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;u_10N        &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">31</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;10-m neutral wind speed (m s-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;L            &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">32</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Monin-Obukhov length (m)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;tau          &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">33</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Wind stress (N m-2)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;ustar        &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">34</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Friction velocity (m s-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;z0           &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">35</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Surface roughness length (m)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;Cdn          &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">36</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;10-m neutral drag coefficient&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;SH           &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">37</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Sensible heat flux (W m-2)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;thetastar    &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">38</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Friction potential temperature (K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;tstar        &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">39</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Friction temperature (K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;z0_t         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">40</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Surface roughness lenght wrt heat based on theta (m)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;Chn          &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">41</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;10-m neutral heat exchange coefficient &#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;LH           &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">42</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Latent heat flux (W m-2)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;qstar        &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">43</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Friction moisture (g kg-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;z0_q         &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">44</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Surface roughness lenght wrt moisture (m)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;Cen          &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">45</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;10-m neutral moisture exchange coefficient&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;tau_bulk     &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">46</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;[Smith, 1988] wind stress (N m-2)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;SH_bulk      &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">47</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;[Smith, 1988] sensible heat flux (W m-2)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;LH_bulk      &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">48</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;[Smith, 1988] latent heat flux (W m-2)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;u_10N_coare  &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">49</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: 10-m neutral wind speed (m s-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;u_10m_coare  &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: 10-m wind speed (m s-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;t_2m_coare   &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">51</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: 2-m temperature (K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;q_2m_coare   &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">52</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: 2-m specific humidity (g kg-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;rh_2m_coare  &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">53</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: 2-m relative humidity (%)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;tau_coare    &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">54</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: wind stress (W m-2)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;z0_coare     &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">55</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: surface roughness length (m)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;Cdn_coare    &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">56</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: 10-m neutral drag coefficient&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;SH_coare     &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">57</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: sensible heat flux (W m-2)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;z0_t_coare   &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">58</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: surface roughness length wrt heat (m)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;Chn_coare    &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">59</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: 10-m neutral heat exchange coefficient&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;LH_coare     &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">60</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: latent heat flux (W m-2)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;z0_q_coare   &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">61</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: surface roughness length wrt moisture (m)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;Cen_coare    &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">62</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Coare3.0: 10-m neutral moisture exchange coefficient&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;tau_bulk_gfd &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">63</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;[Smith, 1988] w/GFD coeffs: Cdn = 2.04e-03&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;SH_bulk_gfd  &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">64</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;[Smith, 1988] Chn = 1.63e-03&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;LH_bulk_gfd  &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">65</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;[Smith, 1988] Cen = 1.57e-03&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;TKE          &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">66</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;turbulence kinetic energy (m+2 s-2)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;u_10N_err    &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">67</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;error on 10-m neutral wind speed (m s-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;Cdn_err      &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">68</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;error on 10-m neutral drag coefficient&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;d_theta      &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">69</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;theta difference (theta - temp_sfc) (K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;d_theta_err  &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">70</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;error on theta difference (K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;Chn_err      &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">71</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;error on 10-m neutral heat exchange coefficient&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;d_q          &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">72</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;specific humidity difference (q - q_sfc) (g kg-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;d_q_err      &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">73</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;error on specific humidity difference (g kg-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;Cen_err      &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">74</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;error on 10-m neutral moisture exchange coefficient&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;u_d_theta    &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">75</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;10-m neutral wind speed x theta difference (m s-1 K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;u_d_theta_err&#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">76</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;error on 10-m neutral wind speed x theta difference (m s-1 K)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;u_d_q        &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">77</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;10-m neutral wind speed x specific humidity difference (m s-1 g kg-1)&#39;</span><span class="p">)),</span>
+<span class="p">(</span><span class="s1">&#39;u_d_q_err    &#39;</span> <span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">flux_data</span><span class="p">[</span><span class="mi">78</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;error on 10-m neutral wind speed x specific humidity difference (m s-1 g kg-1)&#39;</span><span class="p">))</span>
+<span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since I was even lazy to put a quote after each variable name and just added a column of quotes in vim editor, I had to remove white spaces from the dictionary keys.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">values_and_names</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">((</span><span class="n">k</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values_and_names</span><span class="o">.</span><span class="n">viewitems</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The next step was to parse the comments inherited from the original matlab script. Looping over the dictionary, I use few simple tricks to get a string inside parenthesis at the end of each <code>long_name</code> string. The obtained string I then assign to a <code>unit</code> key in the corresponding dictionary. Note I also expand 'deg' to 'degrees' just in case I want to transform it later to <a href="http://scitools.org.uk/iris/docs/latest/iris/iris/unit.html"><code>iris.units.Unit()</code></a> object later (which accepts only 'degrees' as the name for degrees).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">values_and_names</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">values_and_names</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span>
+    <span class="n">ibeg</span> <span class="o">=</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;)&quot;</span><span class="p">)</span>
+    <span class="n">ibeg</span> <span class="o">=</span> <span class="n">ibeg</span><span class="o">+</span><span class="mi">1</span> <span class="k">if</span> <span class="n">ibeg</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">iend</span> <span class="o">=</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="p">)</span>
+    <span class="n">unit_str</span> <span class="o">=</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">ibeg</span><span class="p">:</span><span class="n">iend</span><span class="p">][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">unit_str</span> <span class="o">==</span> <span class="s1">&#39;deg&#39;</span><span class="p">:</span>
+        <span class="n">unit_str</span> <span class="o">=</span> <span class="s1">&#39;degrees&#39;</span>
+    <span class="n">values_and_names</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unit_str</span>
+    <span class="n">values_and_names</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="n">iend</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>With the help of <code>xray</code> package documentation, I rearranged the dictionary into another dictionary of tuples.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">variables</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">values_and_names</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="s1">&#39;time&#39;</span><span class="p">:</span>
+        <span class="n">variables</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> 
+                    <span class="n">values_and_names</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> 
+                    <span class="nb">dict</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="n">values_and_names</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;units&#39;</span><span class="p">],</span> <span class="n">long_name</span><span class="o">=</span><span class="n">values_and_names</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;long_name&#39;</span><span class="p">]))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Why did I do that? Now the data and metadata is packed in a structure that is digestible for <a href="http://xray.readthedocs.org/en/stable/data-structures.html#creating-a-dataset"><code>xray.Dataset</code></a>. The only coordinate is time, and is defined by the same keyword. The great thing is that <code>pandas</code> parsed the time strings for me and already converted them to a <code>datetime64</code> object.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xray</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">variables</span><span class="o">=</span><span class="n">variables</span><span class="p">,</span>
+             <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">values_and_names</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">])})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And voil&agrave;, we have everything packed in the NetCDF file.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;flux_data.nc&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you are interested in the data per se, you should check out this paper:</p>
+<p>Cook, P. A. and I. A. Renfrew, 2015: Aircraft-based observations of air-sea turbulent fluxes around the British Isles, <em>Quarterly J. Royal Meteorol. Soc.</em>,<strong>141</strong>, 139-152. doi: <a href="http://www.uea.ac.uk/~e046/reprints/cook_renfrew_diamet_fluxes_qj2345_QJRMS_2014.pdf">10.1002/qj.2345</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="n">html_foot</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+    <small>
+    <p> This post was written as an IPython (Jupyter) notebook. You can view or download it using
+    <a href="http://nbviewer.ipython.org/github/dennissergeev/dennissergeev.github.io/blob/src/content/notebooks/2015-09-08-csv-to-xray.ipynb">nbviewer</a>.</p>
+    
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></p>
             </div>
-        </div>
+            <!-- /.entry-content -->
+    <hr />
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style">
+            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="addthis_button_tweet"></a>
+            <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    </div>
+    <!-- AddThis Button END -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'dennissergeev'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'exercise-in-converting-a-csv-file-to-netcdf-using-xray';
+                var disqus_url = 'http://dennissergeev.github.io/exercise-in-converting-a-csv-file-to-netcdf-using-xray.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     </section>
+        </article>
+    </section>
+
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
@@ -23996,5 +24433,7 @@ Meteodenny            </a>
     </script>
     <!-- End Google Analytics Code -->
 
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar": false};</script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55c2777d723325cf"></script>
 </body>
 </html>
