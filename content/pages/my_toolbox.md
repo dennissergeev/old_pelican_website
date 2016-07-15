@@ -5,15 +5,16 @@ Slug: my-toolbox
 Here is a list of tools that I use in my research
 #### Operating system
 * Work laptop: Ubuntu 14.04
-* Home laptop: Kubuntu 14.04
+* Home laptop: Lubuntu 16.04
 
 #### Generic code editing
 * [Vim](http://www.vim.org/)
 
 #### Word processing and presentations
+* Markdown
 * Local PC: [Texmaker](http://xm1math.net/texmaker/)
 * Online: [Overleaf](http://overleaf.com), [Authorea](http://authorea.com/)
-* Moving from PowerPoint to reveal.js
+* Google Docs, reveal.js
 
 #### Vector graphics and poster preparation
 * [LaTeX](http://latextemplates.com/cat/conference-posters)
@@ -33,13 +34,13 @@ Here is a list of tools that I use in my research
 * Generic: [matplotlib](http://matplotlib.org/)
 * Geospatial data: [basemap](http://matplotlib.org/basemap/), [cartopy](http://scitools.org.uk/cartopy/index.html)
 * Skew-T diagrams and tephigrams: [skewt](http://pypi.python.org/pypi/SkewT), [tephi](http://tephi.readthedocs.org/en/latest/index.html)
-* 3D visualisation: [Mayavi](http://docs.enthought.com/mayavi/mayavi/), [Paraview](http://paraview.org/python/), [VAPOR](http://www.vapor.ucar.edu) (with Python interface)
+* 3D visualisation: [Paraview](http://paraview.org/python/)
 
 #### Python code development
 * [Jupyter Notebook](http://jupyter.org/)
 
 #### Python management
-* [Anaconda](http://store.continuum.io/cshop/anaconda/), particularly [SciTools](http://binstar.org/scitools) channel
+* [Anaconda](http://store.continuum.io/cshop/anaconda/)
 
 #### Version control
 * Software: [Git](http://git-scm.com/)
