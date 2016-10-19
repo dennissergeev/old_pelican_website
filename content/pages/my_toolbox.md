@@ -5,14 +5,14 @@ Slug: my-toolbox
 Here is a list of tools that I use in my research
 #### Operating system
 * Work laptop: Ubuntu 14.04
-* Home laptop: Lubuntu 16.04
+* Home laptop: Ubuntu 16.04
 
 #### Generic code editing
 * [Vim](http://www.vim.org/)
 
 #### Word processing and presentations
 * Markdown
-* Local PC: [Texmaker](http://xm1math.net/texmaker/)
+* Locally: [Texmaker](http://xm1math.net/texmaker/)
 * Online: [Overleaf](http://overleaf.com), [Authorea](http://authorea.com/)
 * Google Docs, reveal.js
 
@@ -25,26 +25,29 @@ Here is a list of tools that I use in my research
 
 #### Scientific data analysis and visualisation 
 ##### Data IO
-* Earth sciences data formats: [netcdf4](http://unidata.github.io/netcdf4-python/), [h5py](http://docs.h5py.org/en/latest/), [xray](http://xray.readthedocs.org/en/stable/), [iris](http://scitools.org.uk/iris/index.html)
+* Earth sciences data formats: [netcdf4](http://unidata.github.io/netcdf4-python/), [h5py](http://docs.h5py.org/en/latest/), [xarray](http://xray.readthedocs.org/en/stable/), [iris](http://scitools.org.uk/iris/index.html)
 * Tabular data: [pandas](http://pandas.pydata.org/)
 ##### Data analysis
 * [numpy](http://numpy.org/), [scipy](http://scipy.org/), [iris](http://scitools.org.uk/iris/index.html)
 * heavy computations: FORTRAN
 ##### Visualisation
 * Generic: [matplotlib](http://matplotlib.org/)
-* Geospatial data: [basemap](http://matplotlib.org/basemap/), [cartopy](http://scitools.org.uk/cartopy/index.html)
+* Geospatial data: [cartopy](http://scitools.org.uk/cartopy/index.html), [basemap](http://matplotlib.org/basemap/)
 * Skew-T diagrams and tephigrams: [skewt](http://pypi.python.org/pypi/SkewT), [tephi](http://tephi.readthedocs.org/en/latest/index.html)
-* 3D visualisation: [Paraview](http://paraview.org/python/)
+* 3D visualisation: [Paraview](http://paraview.org/python/), [VisPy](http://vispy.org/)
+##### My own little projects
+* Vector calculations over atmospheric fields using finite differences [pyveccalc](https://github.com/dennissergeev/pyveccalc)
+* Some handy functions that I use in my PhD to analyse MetUM output [umtools](https://github.com/dennissergeev/umtools)
 
 #### Python code development
 * [Jupyter Notebook](http://jupyter.org/)
 
 #### Python management
-* [Anaconda](http://store.continuum.io/cshop/anaconda/)
+* [Anaconda](https://docs.continuum.io/anaconda/)
 
 #### Version control
 * Software: [Git](http://git-scm.com/)
-* Hosting: [GitHub](http://github.com/dennissergeev), [Bitbucket](http://bitbucket.org/meteoden)
+* Hosting: [GitHub](http://github.com/dennissergeev), [Bitbucket](http://bitbucket.org/dennissergeev)
 
 #### Workflow automation
 * [GNU Bash](http://gnu.org/software/bash/)
