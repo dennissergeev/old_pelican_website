@@ -3,10 +3,6 @@ Date: 2015-09-15 11:00
 Slug: my-toolbox
 
 Here is a list of tools that I use in my research
-#### Operating system
-* Work laptop: Ubuntu 14.04
-* Home laptop: Ubuntu 16.04
-
 #### Generic code editing
 * [Vim](http://www.vim.org/)
 

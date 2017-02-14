@@ -7,16 +7,17 @@ SITENAME = u'Meteodenny'
 SITEURL = ''
 
 PATH = 'content'
-STATIC_PATHS = ['pdfs', 'extra', 'extra/favicon.ico', 'extra/custom.css']
+STATIC_PATHS = ['robots.txt', 'pdfs', 'extra', 'extra/favicon.ico', 'extra/custom.css']
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/custom.css': {'path': 'extra/custom.css'}
 }
+CUSTOM_CSS = 'extra/custom.css'
 
-THEME = '../modified-bootstrap3'
+THEME = '../pelican-themes/pelican-bootstrap3'
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 BOOTSTRAP_THEME = 'flatly'
 PYGMENTS_STYLE = 'default'
-CUSTOM_CSS = 'extra/custom.css'
 OVERWRITE_NB_HEADER = True
 EXTRA_HEADER = open('_nb_header.html').read()
 
@@ -25,12 +26,17 @@ TIMEZONE = 'Europe/London'
 DEFAULT_LANG = u'en'
 
 PLUGIN_PATHS = ['../pelican-plugins']
-PLUGINS = ['liquid_tags.notebook','tag_cloud','summary']
+PLUGINS = ['tag_cloud', 'summary', 'i18n_subsites',
+           'liquid_tags.img', 'liquid_tags.video',
+           'liquid_tags.youtube', 'liquid_tags.vimeo',
+           'liquid_tags.include_code', 'liquid_tags.notebook']
 
 NOTEBOOK_DIR = 'notebooks'
 
 DISPLAY_TAGS_ON_SIDEBAR = True
 SHOW_ARTICLE_CATEGORY = False
+SHOW_ARTICLE_AUTHOR = False
+DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 
 # Feed generation is usually not desired when developing
@@ -49,9 +55,8 @@ LINKS = (('EarthPy', 'http://earthpy.org/'),
          ('FrictionVelocity', 'http://frictionvelocity.wordpress.com/'),
          ('Looking Aloft', 'http://lukemweather.blogspot.com/'),
          ('PyHOGs', 'http://pyhogs.github.io/'),
-         ('The II-I blog', 'http://andrewrushby.com/'),
          ('MyCarta', 'http://mycarta.wordpress.com/'),
-         ('ClimateSnack', 'http://www.climatesnack.com/'),
+         ('SciSnack', 'http://www.scisnack.com/'),
          ('Dr Climate', 'http://drclimate.wordpress.com/'),
          ('Eloquent Science', 'http://eloquentscience.com/'),
          )
