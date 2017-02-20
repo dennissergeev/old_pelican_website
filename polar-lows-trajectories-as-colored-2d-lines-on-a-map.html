@@ -12006,6 +12006,7 @@ Meteodenny            </a>
                           </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://dennissergeev.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -12082,7 +12083,9 @@ Meteodenny            </a>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+
 
 
 <div class="output_png output_subarea output_execute_result">
@@ -17602,7 +17605,7 @@ height=540
                 <span class="n">out_deg</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">compass</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
      
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Handling input of type &#39;</span><span class="o">+</span><span class="nb">type</span><span class="p">(</span><span class="n">num_deg</span><span class="p">)</span><span class="o">.</span><span class="n">__name__</span><span class="o">+</span><span class="s1">&#39; is not implemented yet&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Handling input of type &#39;</span><span class="o">+</span><span class="nb">type</span><span class="p">(</span><span class="n">num_deg</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="o">+</span><span class="s1">&#39; is not implemented yet&#39;</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">out_deg</span>
 
@@ -17704,7 +17707,7 @@ height=540
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">pmc</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">dat</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">dat</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">%H%M&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dat</span><span class="p">[</span><span class="n">dat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lon</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dat</span><span class="p">[</span><span class="n">dat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">n</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
@@ -17821,7 +17824,9 @@ height=540
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>PMC No.15
 
@@ -17875,7 +17880,9 @@ height=540
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[13]:</div>
+
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -18155,7 +18162,9 @@ height=540
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
@@ -22339,7 +22348,7 @@ q/3PsAAAAABJRU5ErkJggg==
 <span class="n">lon_beg</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">lon</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pmc_list</span><span class="p">]</span>
 <span class="n">lat_beg</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">lat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pmc_list</span><span class="p">]</span>
 <span class="n">x_beg</span><span class="p">,</span> <span class="n">y_beg</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="n">lon_beg</span><span class="p">,</span> <span class="n">lat_beg</span><span class="p">)</span>
-<span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_beg</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">y_beg</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">r&quot;${}$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">n</span><span class="p">),</span> <span class="n">mec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">mfc</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pmc_list</span><span class="p">)]</span>
+<span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_beg</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">y_beg</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;${}$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">n</span><span class="p">),</span> <span class="n">mec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">mfc</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pmc_list</span><span class="p">)]</span>
 
 <span class="c1"># Create a colorbar</span>
 <span class="n">cb</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">)</span> 
@@ -22358,7 +22367,9 @@ q/3PsAAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
@@ -26418,7 +26429,9 @@ lJoy/wfVpTDMPu/i5QAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[20]:</div>
+
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
@@ -26433,7 +26446,10 @@ lJoy/wfVpTDMPu/i5QAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div></p>
+</div>
+ 
+
+</p>
             </div>
             <!-- /.entry-content -->
     <hr />
@@ -26499,13 +26515,13 @@ lJoy/wfVpTDMPu/i5QAAAABJRU5ErkJggg==
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="https://dennissergeev.github.io/tag/polar-lows.html">
-                            polar lows
+                        <a href="https://dennissergeev.github.io/tag/dataviz.html">
+                            dataviz
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="https://dennissergeev.github.io/tag/dataviz.html">
-                            dataviz
+                        <a href="https://dennissergeev.github.io/tag/polar-lows.html">
+                            polar lows
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -26514,13 +26530,13 @@ lJoy/wfVpTDMPu/i5QAAAABJRU5ErkJggg==
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="https://dennissergeev.github.io/tag/data-formats.html">
-                            data formats
+                        <a href="https://dennissergeev.github.io/tag/modelling.html">
+                            modelling
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="https://dennissergeev.github.io/tag/modelling.html">
-                            modelling
+                        <a href="https://dennissergeev.github.io/tag/data-formats.html">
+                            data formats
                         </a>
                     </li>
                 </ul>

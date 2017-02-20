@@ -12006,6 +12006,7 @@ Meteodenny            </a>
                           </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://dennissergeev.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -12103,7 +12104,9 @@ Meteodenny            </a>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+
 
 
 <div class="output_png output_subarea output_execute_result">
@@ -20935,7 +20938,7 @@ height=311
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lon1</span><span class="o">=-</span><span class="mf">180.</span><span class="p">,</span><span class="n">lon2</span><span class="o">=</span><span class="mf">180.</span><span class="p">,</span><span class="n">lat1</span><span class="o">=-</span><span class="mf">90.</span><span class="p">,</span><span class="n">lat2</span><span class="o">=</span><span class="mf">90.</span><span class="p">,</span><span class="n">proj</span><span class="o">=</span><span class="s1">&#39;mill&#39;</span><span class="p">,</span><span class="n">tick_incr</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lon1</span><span class="o">=-</span><span class="mf">180.</span><span class="p">,</span><span class="n">lon2</span><span class="o">=</span><span class="mf">180.</span><span class="p">,</span><span class="n">lat1</span><span class="o">=-</span><span class="mf">90.</span><span class="p">,</span><span class="n">lat2</span><span class="o">=</span><span class="mf">90.</span><span class="p">,</span><span class="n">proj</span><span class="o">=</span><span class="s1">&#39;mill&#39;</span><span class="p">,</span><span class="n">tick_incr</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span> <span class="c1"># Create a figure</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span> <span class="c1"># Define axes</span>
 
@@ -21189,7 +21192,9 @@ height=311
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>   1  201303201142  9.093  76.719
 0  1  201303201244  8.506  76.525
@@ -21267,7 +21272,7 @@ height=311
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">SatView</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">file_names</span><span class="p">,</span><span class="n">out_file_name</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">file_names</span><span class="p">,</span><span class="n">out_file_name</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file_names</span> <span class="o">=</span> <span class="n">file_names</span>
         <span class="k">if</span> <span class="n">out_file_name</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">out_file_name</span> <span class="o">=</span> <span class="s1">&#39;out_&#39;</span> <span class="o">+</span> \
@@ -21281,7 +21286,7 @@ height=311
         <span class="bp">self</span><span class="o">.</span><span class="n">lonlist</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">latlist</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lon1</span><span class="o">=-</span><span class="mf">180.</span><span class="p">,</span><span class="n">lon2</span><span class="o">=</span><span class="mf">180.</span><span class="p">,</span><span class="n">lat1</span><span class="o">=-</span><span class="mf">90.</span><span class="p">,</span><span class="n">lat2</span><span class="o">=</span><span class="mf">90.</span><span class="p">,</span><span class="n">proj</span><span class="o">=</span><span class="s1">&#39;mill&#39;</span><span class="p">,</span><span class="n">tick_incr</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lon1</span><span class="o">=-</span><span class="mf">180.</span><span class="p">,</span><span class="n">lon2</span><span class="o">=</span><span class="mf">180.</span><span class="p">,</span><span class="n">lat1</span><span class="o">=-</span><span class="mf">90.</span><span class="p">,</span><span class="n">lat2</span><span class="o">=</span><span class="mf">90.</span><span class="p">,</span><span class="n">proj</span><span class="o">=</span><span class="s1">&#39;mill&#39;</span><span class="p">,</span><span class="n">tick_incr</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span> <span class="c1"># Create a figure</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span> <span class="c1"># Define axes</span>
 
@@ -21444,7 +21449,9 @@ height=311
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
@@ -21459,7 +21466,10 @@ height=311
 </div>
 </div>
 
-</div></p>
+</div>
+ 
+
+</p>
             </div>
             <!-- /.entry-content -->
     <hr />
@@ -21525,13 +21535,13 @@ height=311
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="https://dennissergeev.github.io/tag/polar-lows.html">
-                            polar lows
+                        <a href="https://dennissergeev.github.io/tag/dataviz.html">
+                            dataviz
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="https://dennissergeev.github.io/tag/dataviz.html">
-                            dataviz
+                        <a href="https://dennissergeev.github.io/tag/polar-lows.html">
+                            polar lows
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -21540,13 +21550,13 @@ height=311
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="https://dennissergeev.github.io/tag/data-formats.html">
-                            data formats
+                        <a href="https://dennissergeev.github.io/tag/modelling.html">
+                            modelling
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="https://dennissergeev.github.io/tag/modelling.html">
-                            modelling
+                        <a href="https://dennissergeev.github.io/tag/data-formats.html">
+                            data formats
                         </a>
                     </li>
                 </ul>
