@@ -38,7 +38,8 @@ SHOW_ARTICLE_CATEGORY = False
 SHOW_ARTICLE_AUTHOR = False
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
-ARCHIVES_SAVE_AS = 'year'
+ARCHIVES_SAVE_AS = 'archives.html'
+DIRECT_TEMPLATES = ['index', 'archives']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
