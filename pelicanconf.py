@@ -34,6 +34,7 @@ PLUGINS = ['tag_cloud', 'summary', 'i18n_subsites',
 NOTEBOOK_DIR = 'notebooks'
 
 DISPLAY_TAGS_ON_SIDEBAR = True
+DISPLAY_TAGS_INLINE = True
 SHOW_ARTICLE_CATEGORY = False
 SHOW_ARTICLE_AUTHOR = False
 DISPLAY_PAGES_ON_MENU = True
@@ -49,11 +50,14 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # SOCIAL
+ACADEM = True
 SOCIAL = (('twitter', 'http://twitter.com/meteodenny'),
           ('linkedin', 'https://www.linkedin.com/in/denis-sergeev-a3837078/'),
           ('github', 'http://github.com/dennissergeev'),
-          ('stackoverflow', 'http://http://stackexchange.com/users/6998329/denis-sergeev', 'stack-overflow')
-)
+          ('stackoverflow', 'http://http://stackexchange.com/users/6998329/denis-sergeev', 'stack-overflow'),
+          ('academia', 'https://eastanglia.academia.edu/DenisSergeev'),
+          ('researchgate', 'https://www.researchgate.net/profile/Denis_Sergeev2')
+         )
 
 # Blogroll
 LINKS = (('EarthPy', 'http://earthpy.org/'),

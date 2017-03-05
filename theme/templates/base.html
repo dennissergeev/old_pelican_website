@@ -78,6 +78,9 @@
     {% if SHARIFF %}
         <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/shariff/shariff.min.css" rel="stylesheet">
     {% endif %}
+    {% if ACADEM %}
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/academicons/css/academicons.css" type="text/css"/>
+    {% endif %}
 
     {% if FEED_ALL_ATOM %}
         <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
