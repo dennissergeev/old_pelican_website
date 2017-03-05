@@ -56,6 +56,9 @@ SOCIAL = (('twitter', 'http://twitter.com/meteodenny'),
           ('github', 'http://github.com/dennissergeev'),
           ('stackoverflow', 'http://http://stackexchange.com/users/6998329/denis-sergeev', 'stack-overflow'),
           ('academia', 'https://eastanglia.academia.edu/DenisSergeev'),
+          ('google-scholar', 'https://scholar.google.co.uk/citations?user=_TPM1CcAAAAJ'),
+          ('mendeley', 'https://www.mendeley.com/profiles/dennis-sergeev'),
+          ('orcid', 'https://orcid.org/0000-0001-8832-5288'),
           ('researchgate', 'https://www.researchgate.net/profile/Denis_Sergeev2')
          )
 
