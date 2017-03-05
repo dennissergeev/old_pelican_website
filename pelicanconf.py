@@ -46,6 +46,13 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# SOCIAL
+SOCIAL = (('twitter', 'http://twitter.com/meteodenny'),
+          ('linkedin', 'https://www.linkedin.com/in/denis-sergeev-a3837078/'),
+          ('github', 'http://github.com/dennissergeev'),
+          ('stackoverflow', 'http://http://stackexchange.com/users/6998329/denis-sergeev', 'stack-overflow')
+)
+
 # Blogroll
 LINKS = (('EarthPy', 'http://earthpy.org/'),
          ('Python4Oceanographers', 'https://ocefpaf.github.io/python4oceanographers/'),
