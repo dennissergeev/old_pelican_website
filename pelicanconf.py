@@ -51,10 +51,10 @@ AUTHOR_FEED_RSS = None
 
 # SOCIAL
 ACADEM = True
-SOCIAL = (('twitter', 'http://twitter.com/meteodenny'),
+SOCIAL = (('twitter', 'https://twitter.com/meteodenny'),
           ('linkedin', 'https://www.linkedin.com/in/denis-sergeev-a3837078/'),
-          ('github', 'http://github.com/dennissergeev'),
-          ('stackoverflow', 'http://http://stackexchange.com/users/6998329/denis-sergeev', 'stack-overflow'),
+          ('github', 'https://github.com/dennissergeev'),
+          ('stackoverflow', 'https://stackexchange.com/users/6998329/denis-sergeev', 'stack-overflow'),
           ('academia', 'https://eastanglia.academia.edu/DenisSergeev'),
           ('google-scholar', 'https://scholar.google.co.uk/citations?user=_TPM1CcAAAAJ'),
           ('mendeley', 'https://www.mendeley.com/profiles/dennis-sergeev'),
