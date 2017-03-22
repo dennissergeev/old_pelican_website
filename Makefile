@@ -37,6 +37,11 @@ ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
 
+CV_DIR=$(INPUTDIR)/cv
+CV_SRC=$(CV_DIR)/details.yml
+CV_TEM=$(BASEDIR)/template-cv.md
+CV_DST=$(INPUTDIR)/pages/about-me.md
+
 help:
 	@echo 'Makefile for a pelican Web site                                           '
 	@echo '                                                                          '
@@ -56,10 +61,14 @@ help:
 	@echo '   make s3_upload                      upload the web site via S3         '
 	@echo '   make cf_upload                      upload the web site via Cloud Files'
 	@echo '   make github                         upload the web site via gh-pages   '
+	@echo '   make cv                             generate about-me page with CV     '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
+
+cv: $(CV_SRC) $(CV_TEM)
+	pandoc $(CV_SRC) --template=$(CV_TEM) --smart -o $(CV_DST)
 
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
