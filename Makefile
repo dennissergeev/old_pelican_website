@@ -39,8 +39,8 @@ endif
 
 CV_DIR=$(INPUTDIR)/cv
 CV_SRC=$(CV_DIR)/details.yml
-CV_TEM=$(BASEDIR)/template-cv.md
-CV_DST=$(INPUTDIR)/pages/about-me.md
+CV_TEM=$(BASEDIR)/template-cv.html
+CV_DST=$(INPUTDIR)/pages/about-me.html
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '

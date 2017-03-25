@@ -1,0 +1,221 @@
+<html>
+<head>
+  <title>About me</title>
+  <meta name="tags" content="thats, awesome" />
+  <meta name="slug" content="about-me" />
+  <meta name="date" content="2017-03-25" />
+<style>
+</style>
+</head>
+
+<body>
+<table class="width: 100%">
+<tr>
+<td style="width: 80%">My name is Denis Sergeev and I am doing a PhD in Meteorology at the University of East Anglia, UK. My research aims at understanding the dynamics of polar mesoscale cyclones, as well as their representation in modern numerical weather prediction systems.</td>
+<td style="width: 20%"><a href="../cv/cv-sergeev-long.pdf"><img title="Download CV in PDF" src="../extra/cv_icon.jpg" alt="CV" style="width: 100px;"/></a></td>
+</tr>
+</table>
+
+<h3>Areas of Interest</h3>
+<ul>
+$for(interests)$
+<li>$interests$</li>
+$endfor$
+</ul>
+
+<h3>Education</h3>
+<table class="fixed">
+$for(education)$
+<tr>
+<td>$education.time$</td>
+<td>
+$if(education.degree)$<b>$education.degree$</b><br>$endif$
+$if(education.distinct)$$education.distinct$<br>$endif$
+$if(education.thesis)$Thesis title: <b>$education.thesis$</b><br>$endif$
+$if(education.department)$<em>$education.department$</em><br>$endif$
+$if(education.institution)$<i>$education.institution$</i><br>$endif$
+$if(education.supervisor)$Supervisor: <a href="mailto:$education.superemail$">$education.supervisor$</a><br>$endif$
+</td>
+</tr>
+$endfor$
+</table>
+
+
+<h3>Internships</h3>
+<table class="fixed">
+$for(internship)$
+<tr>
+<td>$internship.time$</td>
+<td>$if(internship.institution)$<em>$internship.institution$</em><br>$endif$
+$if(internship.department)$$internship.department$<br>$endif$
+$if(internship.location)$$internship.location$<br>$endif$
+$if(internship.supervisor)$Supervisor: <a href="mailto:$internship.superemail$">$internship.supervisor$</a><br>$endif$</td>
+</tr>
+$endfor$
+</table>
+
+<h3>Publications</h3>
+$for(publications)$
+<h4>$publications.name$</h4>
+<ul>
+$for(publications.items)$
+<li>$publications.items.authors$. $publications.items.time$. $publications.items.title$. <i>$publications.items.journal$</i>, <b>$publications.items.volume$</b>$if(publications.items.issue)$($publications.items.issue$): $endif$$publications.items.pages$</li>
+$endfor$
+</ul>
+$endfor$
+
+<h3>Conferences and Workshops</h3>
+$for(conferences)$
+<h4>$conferences.type$</h4>
+<table class="fixed">
+$for(conferences.items)$
+<tr>
+<td>$conferences.items.date$</td>
+<td>$if(conferences.items.url)$<a href="$conferences.items.url$">$conferences.items.title$</a>$else$<b>$conferences.items.title$</b>$endif$<br>
+<em>$conferences.items.conference$</em>
+<br>$conferences.items.location$</td>
+$endfor$
+</table>
+$endfor$
+
+<h3>Awards and Scholarships</h3>
+<table class="fixed">
+$for(awards)$
+<tr>
+<td>$awards.time$</td><td><b>$awards.name$</b><br>$if(awards.by)$$awards.by$<br>$endif$</td>
+</tr>
+$endfor$
+</table>
+
+<h3>Grants</h3>
+<table class="fixed">
+$for(grants)$
+<tr>
+<td>$grants.time$</td><td><b>$grants.title$</b><br>$grants.institution$<br></td>
+</tr>
+$endfor$
+</table>
+
+<h3>Vocational training</h3>
+$for(training)$
+$if(training.type)$<h4>$training.type$</h4>$endif$
+$for(training.items)$
+<table class="fixed">
+<tr>
+<td>$if(training.items.time)$$training.items.time$$endif$</td>
+<td>
+$if(training.items.url)$<a href="$training.items.url$">$training.items.name$</a>$else$<b>$training.items.name$</b>$endif$
+$if(training.items.info)$<br>$training.items.info$$endif$
+</td>
+</tr>
+$endfor$
+</table>
+$endfor$
+
+<h3>Fieldwork Experience</h3>
+<table class="fixed">
+$for(fieldwork)$
+<tr>
+<td>$fieldwork.time$</td>
+<td>
+$if(fieldwork.title)$<b>$fieldwork.title$</b><br>$endif$
+$if(fieldwork.info)$<em>$fieldwork.info$</em><br>$endif$
+$if(fieldwork.location)$$fieldwork.location$<br>$endif$
+</td>
+</tr>
+$endfor$
+</table>
+
+<h3>Teaching Experience</h3>
+<table class="fixed">
+$for(teaching)$
+<tr>
+<td>$teaching.time$</td>
+<td>
+$if(teaching.title)$<h4>$teaching.title$</h4>$endif$
+$if(teaching.institution)$$teaching.institution$<br>$endif$
+<ul>
+$for(teaching.courses)$
+<li>$teaching.courses.name$$if(teaching.courses.leader)$<br>Module organiser: $teaching.courses.leader$$endif$</li>
+$endfor$
+</ul>
+</td>
+</tr>
+$endfor$
+</table>
+
+<h3>Membership in Professional Associations</h3>
+<table class="fixed">
+$for(memberships)$
+<tr>
+<td>$memberships.time$</td><td>$memberships.body$</td>
+</tr>
+$endfor$
+</table>
+	
+<h3>Editorial Service</h3>
+<table class="fixed">
+$for(service)$
+<tr>
+<td>$service.name$</td>
+<td>
+<ul>
+$for(service.items)$
+<li>$service.items$</li>
+$endfor$
+</ul>
+</td>
+</tr>
+$endfor$
+</table>
+
+<h3>Vocational Experience</h3>
+<table class="fixed">
+$for(other)$
+<tr>
+<td>$other.time$</td>
+<td>
+$if(other.url)$<a href="$other.url$">$other.title$</a>$else$<b>$other.title$</b>$endif$<br>
+$if(other.info)$<em>$other.info$</em><br>$endif$
+$if(other.location)$$other.location$<br>$endif$
+</td>
+</tr>
+$endfor$
+</table>
+
+<h3>Outreach</h3>
+<table class="fixed">
+$for(outreach)$
+<tr>
+<td>$outreach.time$</td>
+<td>
+<b>$outreach.name$</b>
+<ul>
+$for(outreach.items)$
+<li> <a href="$outreach.items.url$">$outreach.items.title$</a></li>
+$endfor$
+</ul>
+</td>
+</tr>
+$endfor$
+</table>
+
+<h3>Computer Skills</h3>
+<table class="fixed">
+$for(skills)$
+<tr>
+<td>$skills.group$</td>
+<td>$if(skills.forte)$<b>$skills.forte$</b>, $endif$$skills.skill$</td>
+</tr>
+$endfor$
+</table>
+
+<h3>Languages</h3>
+<ul>
+$for(languages)$
+<li>$languages.language$ ($languages.proficiency$)</li>
+$endfor$
+</ul>
+
+</body>
+</html>
