@@ -59,7 +59,7 @@ $for(publications)$
 <h4>$publications.name$</h4>
 <ul>
 $for(publications.items)$
-<li>$publications.items.authors$. $publications.items.time$. $publications.items.title$. <i>$publications.items.journal$</i>, <b>$publications.items.volume$</b>$if(publications.items.issue)$($publications.items.issue$): $endif$$publications.items.pages$</li>
+<li>$if(publications.items.url)$<a href="$publications.items.url$">$endif$$publications.items.authors$. $publications.items.time$. $publications.items.title$. <i>$publications.items.journal$</i>, <b>$publications.items.volume$</b>$if(publications.items.issue)$($publications.items.issue$): $endif$$publications.items.pages$$if(publications.items.url)$</a>$endif$</li>
 $endfor$
 </ul>
 $endfor$
