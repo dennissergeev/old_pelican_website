@@ -10,6 +10,7 @@ SITEURL = ''
 PATH = 'content'
 STATIC_PATHS = ['extra/robots.txt', 'extra', 'cv/cv-sergeev-long.pdf',
                 'extra/favicon.ico', 'extra/custom.css']
+ARTICLE_PATHS = ['articles']
 ARTICLE_EXCLUDES = ['cv']
 STATIC_EXCLUDES = ['cv/.git']
 EXTRA_PATH_METADATA = {
@@ -44,8 +45,12 @@ DISPLAY_TAGS_ON_SIDEBAR = True
 DISPLAY_TAGS_INLINE = True
 SHOW_ARTICLE_CATEGORY = False
 SHOW_ARTICLE_AUTHOR = False
+
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
+
+MENUITEMS = [('Blog', '/blog/')]
+
 ARCHIVES_SAVE_AS = 'archives.html'
 DIRECT_TEMPLATES = ['index', 'archives']
 
@@ -85,6 +90,11 @@ LINKS = (('EarthPy', 'http://earthpy.org/'),
          )
 
 DEFAULT_PAGINATION = 5
+
+ARTICLE_SAVE_AS = 'blog/{slug}.html'
+ARTICLE_URL = 'blog/{slug}.html'
+INDEX_SAVE_AS = 'blog/index.html'
+INDEX_URL = 'blog/'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
